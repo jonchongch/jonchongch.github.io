@@ -1,8 +1,147 @@
 <!DOCTYPE html>
 <html>
-<style></style>
+<head>
+<script src="https://kit.fontawesome.com/ad42bd9076.js"></script>
+</head>
+<style>
+body{
+margin: 0;
+padding: 0;
+border: none;
+}
+body{
+font-family: sans-serif;
+font-size: 10pt;
+background-image: url(media/illustrations/army_green.png);
+background-size: cover;
+background-repeat: no-repeat;
+}
+section{
+position: relative;
+margin: 0;
+padding: 0;
+}
+.grid-layout{
+display: grid;
+grid-template-columns: 120px auto;
+grid-gap: 0;
+}
+/*////////////////////
+SECTION : Navigation
+////////////////////*/
+    
+#nav-panel{
+position: fixed;
+grid-column: 1;
+width: 5%;
+min-width: 100px;
+height: 100%;
+background: rgba(0,0,0,0.75);
+z-index: 99999;
+}
+#nav-panel > ul > li > a > #logo{
+position: relative;
+display: block;
+margin: 0 auto;
+}
+#nav-panel > ul > li > a > #logo > img{
+position: relative;
+display: block;
+margin: 0;
+padding: 0;
+padding-bottom: 20px;
+border-bottom: 1px solid #fff;
+}
+#nav-panel > ul{
+margin: auto;
+padding: 0px;
+/*padding-left:30px;*/
+}
+#nav-panel > ul > li{
+list-style: none;
+text-align: center;
+margin: 25% 0;
+padding: 0;
+}
+#nav-panel > ul > li > a{
+text-decoration: none;
+font-size: 9pt;
+color: #fff;
+}
+#nav-panel > ul > li > a > i{
+font-size: 24pt;
+margin-bottom: 3px;
+}
+    
+/*////////////////////
+SECTION : Content
+////////////////////*/
+
+#content-panel{
+grid-column: 2;
+}
+#content-panel > #content{}
+#content-panel > object#content{
+width: 100% !important;
+}
+#content-panel > #content > object > #document{}
+</style>
+    
 <body>
-<h1>Hello World!</h1>
-<p>Github Pages</p>
+    <section class="grid-layout">
+        <div id="nav-panel">
+            <ul>
+                <li>
+                    <a href ="#" onclick="load_home()">
+                        <div id="logo"><img src="/media/logo/jn-01.svg"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href ="#" onclick="load_gallery()">
+                        <i class="fas fa-images"></i><br />
+                        WORKS
+                    </a>
+                </li>
+                <li id="contact">
+                    <a href ="#" onclick="load_contact()">
+                        <i class="fas fa-address-book"></i><br />
+                        CONTACT
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="grid-layout">
+        <div id="content-panel">    
+            <object id="content" type="text/html"></object>
+        </div>
+    </section>
 </body>
+
+<script>
+const obj = document.getElementById('content');
+window.addEventListener('message', (evt) => {
+    const msg = evt.data;
+    console.log(evt);
+//  a simple check to be sure we are talking to #obj's content
+    if(msg.type === "set-size") {
+        obj.width = msg.width;
+        obj.height = msg.height;
+        };
+});
+
+obj.data = 'pages/initial.html';
+
+function load_home(){
+        document.getElementById("content").setAttribute('data', '/pages/initial.html');
+        }
+function load_gallery(){
+        document.getElementById("content").setAttribute('data', '/pages/gallery.html');
+        }
+function load_contact(){
+        document.getElementById("content").setAttribute('data', '/pages/err.html');
+        }
+
+</script>
 </html>
