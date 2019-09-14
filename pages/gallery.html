@@ -93,18 +93,20 @@ padding: 0;
 </body>
 <script>
 function urls() {
-    var srcName = document.getElementById('thumbImg').getAttribute("src");
-    var srcFile = srcName.substring(srcName.indexOf('/'));
-    //split.
-    var imgName = srcFile.split('.');
-    return(imgName[0]);
 }
 function modalView(el){
 //var docId = el.parentNode.id;
 //document.getElementById(docId);
 //var mo = ;
+    
+    var srcName = document.getElementById('thumbImg').getAttribute("src");
+    var srcFile = srcName.substring(srcName.indexOf('/'));
+    //split.
+    var imgName = srcFile.split('.');
+//    return(imgName[0]);
+    
 document.getElementById('mo').style.display = 'block';
-document.getElementById('fullImg').setAttribute.src = urls + '-full.jpg';
+document.getElementById('fullImg').setAttribute.src = imgName + '-full.jpg';
 }
 
 parent.postMessage({
