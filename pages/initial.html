@@ -10,33 +10,151 @@ body{
 font-family: sans-serif;
 font-size: 10pt
 }
+ 
+/*////////////////////
+GRID : Template
+////////////////////*/   
 .grid-title {
 display: grid;
-grid-template-columns: 20% 20% 20% 20% 20%;
+grid-template: none / 20% 20% 20% 20% 20%;
 margin: 5px;
 padding: 5px;
 }
 .grid-title > div {
 margin: 5px;
 }
+    
+/*////////////////////
+SECTION : About
+////////////////////*/
 .abt{
 grid-column: 1 / span 3;
+padding: 0;
+padding-bottom: 0;
+border-bottom: 0;
 border-right: 10px solid #000;
 }
 .abt, .abt > h1, .abt > p{
 margin: 0;
-font-size: 46pt;
+font-size: 2.2em;
 font-weight: bold;
 text-transform: uppercase;
 line-height: 1em;
 }
+/*//////////////////////////////////////////////////////////////
+RESPONSIVE : Desktop
+//////////////////////////////////////////////////////////////*/
+@media screen and (max-width : 1280px){
+/*////////////////////
+GRID : Template
+////////////////////*/   
+.grid-title {
+display: grid;
+grid-template: none / 20% 20% 20% 20% 20%;
+margin: 5px;
+padding: 5px;
+}
+.grid-title > div {
+margin: 5px;
+}
+
+/*////////////////////
+SECTION : About
+////////////////////*/
+.abt{
+grid-column: 1 / span 3;
+padding: 0;
+padding-bottom: 0;
+border-bottom: 0;
+border-right: 10px solid #000;
+}
+.abt, .abt > h1, .abt > p{
+margin: 0;
+font-size: 2.2em;
+font-weight: bold;
+text-transform: uppercase;
+line-height: 1em;
+}
+}
+/*//////////////////////////////////////////////////////////////
+RESPONSIVE : Tablet
+//////////////////////////////////////////////////////////////*/
+@media screen and (max-width : 768px){
+/*////////////////////
+GRID : Template
+////////////////////*/   
+.grid-title {
+display: grid;
+grid-template: none / 25% 25% 25% 25%;
+margin: 5px;
+padding: 5px;
+}
+.grid-title > div {
+margin: 5px;
+}
+
+/*////////////////////
+SECTION : About
+////////////////////*/
+.abt{
+grid-column: 1 / span 3;
+padding: 0;
+padding-bottom: 20px;
+border-bottom: 10px solid #000;
+border-right: 0;
+}
+.abt, .abt > h1, .abt > p{
+margin: 0;
+font-size: 2em;
+font-weight: bold;
+text-transform: uppercase;
+line-height: 1em;
+}
+}
+/*//////////////////////////////////////////////////////////////
+RESPONSIVE : Mobile
+//////////////////////////////////////////////////////////////*/
+
+@media screen and (max-width : 480px){
+/*////////////////////
+GRID : Template
+////////////////////*/   
+.grid-title {
+display: grid;
+grid-template: auto / 50% 50%;
+margin: 5px;
+padding: 5px;
+}
+.grid-title > div {
+margin: 5px;
+}
+
+/*////////////////////
+SECTION : About
+////////////////////*/
+.abt{
+grid-column: 1 / span 2 ;
+padding: 0;
+padding-bottom: 20px;
+border-bottom: 10px solid #000;
+border-right: 0;
+}
+.abt, .abt > h1, .abt > p{
+margin: 0;
+font-size: 1.8em;
+font-weight: bold;
+text-transform: uppercase;
+line-height: 1em;
+}
+}
+    
 </style>
 <body>
     <div class="grid-title">
         <div class="abt">
             <h1>I am Jonathan</h1>
             <p>
-                And these are<br />my passion for<br />Graphic Design
+                And these are my passion for Graphic Design
             </p>
         </div>
         <div class=""><br /></div>
@@ -48,5 +166,6 @@ line-height: 1em;
         width: document.documentElement.offsetWidth,
         height: document.documentElement.offsetHeight
     });
+    
 </script>
 </html>
