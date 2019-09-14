@@ -92,18 +92,19 @@ padding: 0;
     </div>
 </body>
 <script>
+function urls() {
+    var srcName = document.getElementById('thumbImg').getAttribute("src");
+    var srcFile = srcName.substring(srcName.lastIndexOf('/')+1);
+    //split.
+    var imgName = srcFile.split('.');
+    return(imgName[0]);
+}
 function modalView(el){
 //var docId = el.parentNode.id;
 //document.getElementById(docId);
 //var mo = ;
-//function urls() {
-    var imgFile = this.document.getElementById('thumbImg').src.substring(this.document.getElementById('thumbImg').src.lastIndexOf('/')+1);
-//    //split.
-    var imgName = imgFile.split('.');
-//    return(imgName[0]);
-//    }
 document.getElementById('mo').style.display = 'block';
-document.getElementById('fullImg').src = imgName + '-full.jpg';
+document.getElementById('fullImg').setAttribute.src = urls + '-full.jpg';
 }
 
 parent.postMessage({

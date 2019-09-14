@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<script src="https://kit.fontawesome.com/ad42bd9076.js"></script>
+    <script src="https://kit.fontawesome.com/ad42bd9076.js"></script>
 </head>
+
 <style>
+/*//////////////////////////////////////////////////////////////
+Default
+//////////////////////////////////////////////////////////////*/
 body{
 margin: 0;
 padding: 0;
@@ -12,6 +17,16 @@ border: none;
 body{
 font-family: sans-serif;
 font-size: 10pt;
+}
+body > div{
+position: relative;
+width: 100%;
+height: 100%;
+}
+body > .bg{
+position: fixed;
+width: 100%;
+height: 100%;
 background-image: url(media/army_green.png);
 background-size: cover;
 background-repeat: no-repeat;
@@ -21,56 +36,101 @@ position: relative;
 margin: 0;
 padding: 0;
 }
+/*////////////////////
+GRID : Template
+////////////////////*/
+
 .grid-layout{
 display: grid;
-grid-template-columns: 120px auto;
+grid-template: none / 120px auto ;
 grid-gap: 0;
 }
+.grid-content{
+display: grid;
+grid-template: none / 120px auto ;
+grid-gap: 0;
+height: 100vh;
+}
+    
 /*////////////////////
 SECTION : Navigation
 ////////////////////*/
     
 #nav-panel{
 position: fixed;
-grid-column: 1;
-width: 5%;
-min-width: 100px;
+display: block;
+grid-column: none;
+margin: 0;
+padding: 0;
+width: 100px;
 height: 100%;
 background: rgba(0,0,0,0.75);
 z-index: 99999;
 }
-#nav-panel > ul > li > a > #logo{
-position: relative;
-display: block;
-margin: 0 auto;
-}
-#nav-panel > ul > li > a > #logo > img{
+#nav-panel > ul{
 position: relative;
 display: block;
 margin: 0;
 padding: 0;
-padding-bottom: 20px;
-border-bottom: 1px solid #fff;
-}
-#nav-panel > ul{
-margin: auto;
-padding: 0px;
-/*padding-left:30px;*/
+height: 100%;
 }
 #nav-panel > ul > li{
-list-style: none;
-text-align: center;
-margin: 25% 0;
-padding: 0;
+position: relative;
+display: block;
+vertical-align: middle;
+padding: 15px 0;
+}
+#nav-panel > ul > li:first-child{
+border-bottom: 1px solid #fff;
+border-right:0;
+margin: 0 0 15px 0;
+padding: 15px 0;
 }
 #nav-panel > ul > li > a{
+position: relative;
+display: block;
+width: 100%;
+height: 100%;
 text-decoration: none;
 font-size: 9pt;
 color: #fff;
 }
-#nav-panel > ul > li > a > i{
-font-size: 24pt;
+#nav-panel > ul > li > a > #logo{
+position: relative;
+display: block;
+text-align: center;
+margin: 0 auto;
+padding: 0;
+vertical-align: middle
+}
+#nav-panel > ul > li > a > #icon{
+position: relative;
+display: block;
+text-align: center;
+margin: 0 auto;
+padding: 0;
+vertical-align: middle
+}
+#nav-panel > ul > li > a > #logo > img{
+position: relative;
+margin: 0 auto;
+padding: 0;
+width: 7.5em;
+}
+#nav-panel > ul > li > a > #icon > i{
+position: relative;
+display: inline-block;
+margin: 0 auto;
+padding: 0;
 margin-bottom: 3px;
+font-size: 2.2em;
+}
+#nav-panel > ul > li > a > #icon > span{
+position: relative;
+display: inline-block;
+margin: 0 auto;
+padding: 0;
+font-size: 0.8em;
 }
     
 /*////////////////////
@@ -79,44 +139,177 @@ SECTION : Content
 
 #content-panel{
 grid-column: 2;
+height: 100vh;
 }
 #content-panel > #content{}
 #content-panel > object#content{
 width: 100% !important;
+height: 100vh;
 }
-#content-panel > #content > object > #document{}
-</style>
+
+/*//////////////////////////////////////////////////////////////
+RESPONSIVE : Desktop
+//////////////////////////////////////////////////////////////*/
+
+@media screen and (min-width : 1280px){
+}
     
+/*//////////////////////////////////////////////////////////////
+RESPONSIVE : Mobile
+//////////////////////////////////////////////////////////////*/
+
+@media screen and (max-width : 480px){
+/*////////////////////
+GRID : Template
+////////////////////*/
+.grid-layout{
+display: grid;
+grid-template: 65px auto / auto ;
+grid-gap: 0;
+}
+.grid-content{
+display: grid;
+grid-template: none / 120px auto ;
+grid-gap: 0;
+height: 100vh;
+}
+    
+/*////////////////////
+SECTION : Navigation
+////////////////////*/
+    
+#nav-panel{
+position: fixed;
+display: block;
+grid-column: none;
+margin: 0;
+padding: 0;
+width: 100%;
+height: 65px;
+background: rgba(0,0,0,0.75);
+z-index: 99999;
+}
+#nav-panel > ul{
+position: relative;
+display:table;
+margin: 0;
+padding: 0;
+height: 100%;
+}
+#nav-panel > ul > li{
+position: relative;
+display: table-cell;
+vertical-align: middle;
+padding: 0 0 0 20px;
+}
+#nav-panel > ul > li:first-child{
+border-bottom: 0;
+border-right: 1px solid #fff;
+margin: 0;
+padding: 0;
+}
+#nav-panel > ul > li > a{
+position: relative;
+display: table;
+width: 100%;
+height: 100%;
+text-decoration: none;
+font-size: 9pt;
+color: #fff;
+}
+#nav-panel > ul > li > a > #logo{
+position: relative;
+display: table-cell;
+text-align: center;
+margin: 0 auto;
+padding: 0;
+vertical-align: middle
+}
+#nav-panel > ul > li > a > #icon{
+position: relative;
+display: table-cell;
+text-align: center;
+margin: 0 auto;
+padding: 0;
+vertical-align: middle
+}
+#nav-panel > ul > li > a > #logo > img{
+position: relative;
+margin: 0 auto;
+padding: 0;
+width: 7.5em;
+}
+#nav-panel > ul > li > a > #icon > i{
+position: relative;
+display: inline-block;
+margin: 0 auto;
+padding: 0;
+margin-bottom: 3px;
+font-size: 2.2em;
+}
+#nav-panel > ul > li > a > #icon > span{
+position: relative;
+display: inline-block;
+margin: 0 auto;
+padding: 0;
+font-size: 0.8em;
+}
+    
+/*////////////////////
+SECTION : Content
+////////////////////*/
+
+#content-panel{
+grid-column: 1 / span 2;
+height: 100vh;
+}
+#content-panel > #content{}
+#content-panel > object#content{
+width: 100% !important;
+height: 100vh;
+}
+}
+</style>
+
 <body>
+    <div class="bg">
     <section class="grid-layout">
         <div id="nav-panel">
             <ul>
                 <li>
                     <a href ="#" onclick="load_home()">
-                        <div id="logo"><img src="/media/jn-01.svg"></div>
+                        <div id="logo">
+                            <img src="/media/jn-01.svg">
+                        </div>
                     </a>
                 </li>
                 <li>
                     <a href ="#" onclick="load_gallery()">
-                        <i class="fas fa-images"></i><br />
-                        GALLERY
+                        <div id="icon">
+                            <i class="fas fa-images"></i>
+                            <br />
+                            <span>GALLERY</span>
+                        </div>
                     </a>
                 </li>
                 <li id="contact">
                     <a href ="#" onclick="load_contact()">
-                        <i class="fas fa-address-book"></i><br />
-                        CONTACT
+                        <div id="icon">
+                            <i class="fas fa-address-book"></i><br />
+                            <span>CONTACT</span>
+                        </div>
                     </a>
                 </li>
             </ul>
         </div>
     </section>
     
-    <section class="grid-layout">
+    <section class="grid-content">
         <div id="content-panel">    
             <object id="content" type="text/html"></object>
         </div>
     </section>
+    </div>
 </body>
 
 <script>
@@ -132,6 +325,20 @@ window.addEventListener('message', (evt) => {
 });
 
 obj.data = 'pages/initial.html';
+    
+function resizedContent( object ) {
+    object.width  = object.contentWindow.document.body.scrollWidth;
+    object.height = object.contentWindow.document.body.scrollHeight;
+}
+window.addEventListener('resize', function(e) {
+    var object = document.getElementById( 'content' );
+    resizedContent( object );
+// or, to resize all iframes:
+//    var objects = document.querySelectorAll("objects1");
+//    for( var i = 0; i < iframes.length; i++) {
+//        resizedContent( object[i] );
+//    }
+} );
 
 function load_home(){
         document.getElementById("content").setAttribute('data', '/pages/initial.html');
