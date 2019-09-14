@@ -86,27 +86,27 @@ padding: 0;
     </div>
     <div class="grid-cont">
         <div id="p20190301">
-            <img id="thumbImg" src="/media/sample/old-layout.jpg" onclick="modalView(this)">
+            <img id="thumbImg" src="../media/sample/old-layout.jpg" onclick="modalView(this)">
         </div>
         <div></div>
     </div>
 </body>
 <script>
-function urls() {
-}
 function modalView(el){
 //var docId = el.parentNode.id;
 //document.getElementById(docId);
 //var mo = ;
     
     var srcName = document.getElementById('thumbImg').getAttribute("src");
-    var srcFile = srcName.substring(srcName.indexOf('/'));
-    //split.
-    var imgName = srcFile.split('.');
+    var startUrl = srcName.indexOf(".");
+    var endUrl = srcName.lastIndexOf(".");
+    var srcFile = srcName.substring(startUrl,endUrl);
+//split.
+//    var imgName = srcFile.split('.');
 //    return(imgName[0]);
     
 document.getElementById('mo').style.display = 'block';
-document.getElementById('fullImg').setAttribute.src = imgName + '-full.jpg';
+document.getElementById('fullImg').src = srcFile + '-full.jpg';
 }
 
 parent.postMessage({
