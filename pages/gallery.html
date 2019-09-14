@@ -94,7 +94,7 @@ padding: 0;
 <script>
 function urls() {
     var srcName = document.getElementById('thumbImg').getAttribute("src");
-    var srcFile = srcName.substring(srcName.lastIndexOf('/')+1);
+    var srcFile = srcName.substring(srcName.indexOf('/'));
     //split.
     var imgName = srcFile.split('.');
     return(imgName[0]);
