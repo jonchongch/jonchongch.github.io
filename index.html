@@ -36,20 +36,13 @@ position: relative;
 margin: 0;
 padding: 0;
 }
+    
 /*////////////////////
 GRID : Template
 ////////////////////*/
-
 .grid-layout{
 display: grid;
-grid-template: none / 120px auto ;
-grid-gap: 0;
-}
-.grid-content{
-display: grid;
-grid-template: none / 120px auto ;
-grid-gap: 0;
-height: 100vh;
+grid-template: auto / 120px auto ;
 }
     
 /*////////////////////
@@ -57,79 +50,61 @@ SECTION : Navigation
 ////////////////////*/
     
 #nav-panel{
-position: fixed;
+grid-area: 1 / 1 / auto / auto;
 display: block;
-grid-column: none;
-margin: 0;
-padding: 0;
-width: 100px;
+position: fixed;
 height: 100%;
-background: rgba(0,0,0,0.75);
-z-index: 99999;
+width: 100px;
+background: rgba(0,0,0,0.8)
 }
 #nav-panel > ul{
-position: relative;
 display: block;
 margin: 0;
 padding: 0;
-height: 100%;
+height: 65px;
+list-style: none;
 }
 #nav-panel > ul > li{
-position: relative;
 display: block;
+margin: 0 auto;
+padding: 0;
+text-align: center;
 vertical-align: middle;
-padding: 15px 0;
 }
 #nav-panel > ul > li:first-child{
+display: block;
+margin: 0 auto;
+padding: 0;
+text-align: center;
+vertical-align: middle;
+border-right: none;
 border-bottom: 1px solid #fff;
-border-right:0;
-margin: 0 0 15px 0;
-padding: 15px 0;
 }
 #nav-panel > ul > li > a{
 position: relative;
-display: block;
-width: 100%;
+display: table;
+margin: 20px auto;
 height: 100%;
 text-decoration: none;
-font-size: 9pt;
 color: #fff;
 }
 #nav-panel > ul > li > a > #logo{
-position: relative;
-display: block;
-text-align: center;
-margin: 0 auto;
-padding: 0;
-vertical-align: middle
+display: table-cell;
+vertical-align: middle;
 }
 #nav-panel > ul > li > a > #icon{
-position: relative;
-display: block;
-text-align: center;
-margin: 0 auto;
-padding: 0;
-vertical-align: middle
+display: table-cell;
+vertical-align: middle;
 }
 #nav-panel > ul > li > a > #logo > img{
-position: relative;
-margin: 0 auto;
-padding: 0;
-width: 7.5em;
+display: inline-block;
+width: 100%;
 }
 #nav-panel > ul > li > a > #icon > i{
-position: relative;
-display: inline-block;
-margin: 0 auto;
-padding: 0;
-margin-bottom: 3px;
 font-size: 2.2em;
+margin-bottom: 3px;
 }
 #nav-panel > ul > li > a > #icon > span{
-position: relative;
-display: inline-block;
-margin: 0 auto;
-padding: 0;
 font-size: 0.8em;
 }
     
@@ -138,15 +113,18 @@ SECTION : Content
 ////////////////////*/
 
 #content-panel{
-grid-column: 2;
-height: 100vh;
+grid-area: 1 / 2 / auto / auto;
+display: block;
+position: relative;
+margin: 0;
+padding: 0;
+width: 100%;
 }
-#content-panel > #content{}
+#content-panel > object{
+width: 100%;
+}
 #content-panel > object#content{
-width: 100% !important;
-height: 100vh;
 }
-
 /*//////////////////////////////////////////////////////////////
 RESPONSIVE : Desktop
 //////////////////////////////////////////////////////////////*/
@@ -164,14 +142,7 @@ GRID : Template
 ////////////////////*/
 .grid-layout{
 display: grid;
-grid-template: 65px auto / auto ;
-grid-gap: 0;
-}
-.grid-content{
-display: grid;
-grid-template: none / 120px auto ;
-grid-gap: 0;
-height: 100vh;
+grid-template: 65px auto / 100% ;
 }
     
 /*////////////////////
@@ -179,79 +150,61 @@ SECTION : Navigation
 ////////////////////*/
     
 #nav-panel{
-position: fixed;
+grid-area: 1 / 1 / auto / auto;
 display: block;
-grid-column: none;
-margin: 0;
-padding: 0;
+position: fixed;
+height: auto;
 width: 100%;
-height: 65px;
-background: rgba(0,0,0,0.75);
-z-index: 99999;
+background: rgba(0,0,0,0.8)
 }
 #nav-panel > ul{
-position: relative;
-display:table;
+display: table;
 margin: 0;
 padding: 0;
-height: 100%;
+height: 65px;
+list-style: none;
 }
 #nav-panel > ul > li{
-position: relative;
 display: table-cell;
+margin: 0 auto;
+padding: 0 0 0 15px;
+text-align: center;
 vertical-align: middle;
-padding: 0 0 0 20px;
 }
 #nav-panel > ul > li:first-child{
-border-bottom: 0;
-border-right: 1px solid #fff;
-margin: 0;
+display: table-cell;
+margin: 0 auto;
 padding: 0;
+text-align: center;
+vertical-align: middle;
+border-right: 1px solid #fff;
+border-bottom: none;
 }
 #nav-panel > ul > li > a{
 position: relative;
 display: table;
-width: 100%;
+margin: 0 auto;
 height: 100%;
 text-decoration: none;
-font-size: 9pt;
 color: #fff;
 }
 #nav-panel > ul > li > a > #logo{
-position: relative;
 display: table-cell;
-text-align: center;
-margin: 0 auto;
-padding: 0;
-vertical-align: middle
+vertical-align: middle;
 }
 #nav-panel > ul > li > a > #icon{
-position: relative;
 display: table-cell;
-text-align: center;
-margin: 0 auto;
-padding: 0;
-vertical-align: middle
+vertical-align: middle;
 }
 #nav-panel > ul > li > a > #logo > img{
-position: relative;
-margin: 0 auto;
-padding: 0;
-width: 7.5em;
+display: inline-block;
+width: 75px;
 }
 #nav-panel > ul > li > a > #icon > i{
-position: relative;
-display: inline-block;
-margin: 0 auto;
-padding: 0;
+font-size: 1.8em;
 margin-bottom: 3px;
-font-size: 2.2em;
 }
 #nav-panel > ul > li > a > #icon > span{
-position: relative;
-display: inline-block;
-margin: 0 auto;
-padding: 0;
 font-size: 0.8em;
 }
     
@@ -260,55 +213,57 @@ SECTION : Content
 ////////////////////*/
 
 #content-panel{
-grid-column: 1 / span 2;
-height: 100vh;
+grid-area: 2 / 1 / auto / auto;
+display: block;
+position: relative;
+margin: 0;
+padding: 0;
+width: 100%;
 }
-#content-panel > #content{}
+#content-panel > object{
+width: 100%;
+}
 #content-panel > object#content{
-width: 100% !important;
-height: 100vh;
 }
 }
 </style>
 
 <body>
     <div class="bg">
-    <section class="grid-layout">
-        <div id="nav-panel">
-            <ul>
-                <li>
-                    <a href ="#" onclick="load_home()">
-                        <div id="logo">
-                            <img src="/media/jn-01.svg">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href ="#" onclick="load_gallery()">
-                        <div id="icon">
-                            <i class="fas fa-images"></i>
-                            <br />
-                            <span>GALLERY</span>
-                        </div>
-                    </a>
-                </li>
-                <li id="contact">
-                    <a href ="#" onclick="load_contact()">
-                        <div id="icon">
-                            <i class="fas fa-address-book"></i><br />
-                            <span>CONTACT</span>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
-    
-    <section class="grid-content">
-        <div id="content-panel">    
-            <object id="content" type="text/html"></object>
-        </div>
-    </section>
+        <section class="grid-layout">
+            <div id="nav-panel">
+                <ul>
+                    <li>
+                        <a href ="#" onclick="load_home()">
+                            <div id="logo">
+                                <img src="media/jn-01.svg">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href ="#" onclick="load_gallery()">
+                            <div id="icon">
+                                <i class="fas fa-images"></i>
+                                <br />
+                                <span>GALLERY</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="contact">
+                        <a href ="#" onclick="load_contact()">
+                            <div id="icon">
+                                <i class="fas fa-address-book"></i><br />
+                                <span>CONTACT</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="content-panel">    
+                <object id="content" type="text/html"></object>
+            </div>
+        </section>
     </div>
 </body>
 
@@ -325,14 +280,14 @@ window.addEventListener('message', (evt) => {
 });
 
 obj.data = 'pages/initial.html';
-    
-function resizedContent( object ) {
-    object.width  = object.contentWindow.document.body.scrollWidth;
-    object.height = object.contentWindow.document.body.scrollHeight;
+
+function resizedContent(obj) {
+    obj.width  = obj.contentWindow.document.body.scrollWidth;
+    obj.height = obj.contentWindow.document.body.scrollHeight;
 }
+
 window.addEventListener('resize', function(e) {
-    var object = document.getElementById( 'content' );
-    resizedContent( object );
+    resizedContent(obj);
 // or, to resize all iframes:
 //    var objects = document.querySelectorAll("objects1");
 //    for( var i = 0; i < iframes.length; i++) {
@@ -341,13 +296,13 @@ window.addEventListener('resize', function(e) {
 } );
 
 function load_home(){
-        document.getElementById("content").setAttribute('data', '/pages/initial.html');
+        obj.setAttribute('data', 'pages/initial.html');
         }
 function load_gallery(){
-        document.getElementById("content").setAttribute('data', '/pages/gallery.html');
+        obj.setAttribute('data', 'pages/gallery.html');
         }
 function load_contact(){
-        document.getElementById("content").setAttribute('data', '/pages/err.html');
+        obj.setAttribute('data', 'pages/err.html');
         }
 
 </script>
