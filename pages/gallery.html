@@ -13,40 +13,57 @@ font-size: 10pt
     
 /*////////////////////
 GRID : Template
-////////////////////*/   
-.grid-title{
+////////////////////*/  
+    
+.grid-page {
 display: grid;
 grid-template: none / 20% 20% 20% 20% 20%;
 margin: 5px;
 padding: 5px;
 }
-.grid-title > div{
+.grid-page > div {
 margin: 5px;
 }
-.grid-content{
-display: grid;
-grid-template: max-content / 25% 25% 25% 25%;
+.grid-page > .breaker {
+grid-area: 1 / 1 / 1 / span 5;
 }
 /*////////////////////
 SECTION : Gallery
 ////////////////////*/
+    
 .gallery{
-grid-column: 1 / span 3;
+grid-area: 1 / 1 / 1 / span 2;
 padding: 0;
 padding-bottom: 0;
-border-bottom: 0;
 border-right: 10px solid #000;
+border-bottom: 0;
 }
-.gallery, .gallery > p{
+.gallery{
 margin: 0;
-font-size: 2.2em;
+font-size: 1em;
 font-weight: bold;
 text-transform: uppercase;
 line-height: 1em;
 }
+.gallery > h1,{
+margin: 0;
+font-size: 3.5em;
+font-weight: bold;
+text-transform: uppercase;
+line-height: 1em;
+}
+.gallery > p{
+margin: 0;
+font-size: 3.5em;
+font-weight: bold;
+text-transform: uppercase;
+line-height: 1em;
+}
+    
 /*////////////////////
 MODAL OVERLAY
 ////////////////////*/
+
 #mo{
 display: none;
 position: absolute;
@@ -59,70 +76,94 @@ background: rgba( 0, 0, 0, 0.5)
 }
 #mo > img{
 display: block;
-width: 100%;
-height: 100%;
-margin: 20px auto;
-padding: 0;
-transform: scale(0.9);
+width: 90%;
+height: auto;
+margin: 0 auto;
+padding: 5%;
 }
+
 /*////////////////////
 PROJECTS
 ////////////////////*/
-.grid-content > div > img{
-display: block;
-width: 100%;
+
+.grid-page > .content{
+grid-area: auto / auto / span 1/ span 1;
+margin: 20px 10px;
 }
-#p20190301{
+.grid-page > .content > img{
 display: block;
-grid-column: 1 / span 1;
-margin: 10px 20px;
-padding: 0;
+width: 75%;
 }
+#p20190301{}
+
 /*//////////////////////////////////////////////////////////////
 RESPONSIVE : Desktop
+//////////////////////////////////////////////////////////////*/
+
+/*//////////////////////////////////////////////////////////////
+RESPONSIVE : Tablet
 //////////////////////////////////////////////////////////////*/
 
 /*//////////////////////////////////////////////////////////////
 RESPONSIVE : Mobile
 //////////////////////////////////////////////////////////////*/
 
-@media screen and (max-width : 480px){ 
+@media screen and (max-width : 480px){
+    
 /*////////////////////
 GRID : Template
-////////////////////*/   
-.grid-title{
+////////////////////*/  
+
+.grid-page{
 display: grid;
-grid-template: none / 50% 50%;
+grid-template: auto / 50% 50%;
 margin: 5px;
 padding: 5px;
 }
-.grid-title > div{
+.grid-page > div{
 margin: 5px;
 }
-.grid-content{
-display: grid;
-grid-template: max-content / 50% 50%;
+.grid-page > .breaker {
+grid-area: 1 / 1 / 1 / span 3;
 }
+
 /*////////////////////
 SECTION : Gallery
 ////////////////////*/
+
 .gallery{
-grid-column: 1 / span 2 ;
+grid-area: 1 / 1 / 1 / span 3;
 padding: 0;
 padding-bottom: 20px;
-border-bottom: 10px solid #000;
 border-right: 0;
+border-bottom: 10px solid #000;
 }
-.gallery, .gallery > p{
+.gallery{
 margin: 0;
-font-size: 1.8em;
+font-size: 1em;
 font-weight: bold;
 text-transform: uppercase;
 line-height: 1em;
 }
+.gallery > h1,{
+margin: 0;
+font-size: 3.25em;
+font-weight: bold;
+text-transform: uppercase;
+line-height: 1em;
+}
+.gallery > p{
+margin: 0;
+font-size: 3.25em;
+font-weight: bold;
+text-transform: uppercase;
+line-height: 1em;
+}
+
 /*////////////////////
 MODAL OVERLAY
 ////////////////////*/
+
 #mo{
 display: none;
 position: absolute;
@@ -135,43 +176,57 @@ background: rgba( 0, 0, 0, 0.5)
 }
 #mo > img{
 display: block;
-width: 100%;
-height: 100%;
+width: 90%;
+height: auto;
 margin: 0 auto;
-padding: 0;
-transform: scale(0.95);
+padding: 5%;
 }
+
 /*////////////////////
 PROJECTS
 ////////////////////*/
-.grid-content > div > img{
+
+.grid-page > .content{
+grid-area: auto / auto / span 1/ span 1;
+margin: 10px 20px;
+}
+.grid-page > .content > img{
 display: block;
 width: 100%;
 }
-#p20190301{
-display: block;
-grid-column: 1 / span 1;
-margin: 10px 20px;
-padding: 0;
-}
+#p20190301{}
 }
 </style>
 <body>
-    <div id="mo" onclick="this.style.display='none'">
-        <img id="fullImg">
-    </div>
-    <div class="grid-title">
+    <div class="grid-page">
         <div class="gallery">
             <p>
                 You can find<br />my works here
             </p>
         </div>
-    </div>
-    <div class="grid-content">
-        <div id="p20190301">
-            <img id="thumbImg" src="../media/sample/old-layout.jpg" onclick="modalView(this)">
+        <div class="breaker"></div>
+        <div class="content" id="p20190301">
+            <img id="thumbImg" src="../media/old-layout.jpg" onclick="modalView(this)">
         </div>
-        <div></div>
+        <div class="content" id="p20190302">
+            <img id="thumbImg" src="../media/old-layout.jpg" onclick="modalView(this)">
+        </div>
+        <div class="content" id="p20190303">
+            <img id="thumbImg" src="../media/old-layout.jpg" onclick="modalView(this)">
+        </div>
+        <div class="content" id="p20190304">
+            <img id="thumbImg" src="../media/old-layout.jpg" onclick="modalView(this)">
+        </div>
+        <div class="content" id="p20190305">
+            <img id="thumbImg" src="../media/old-layout.jpg" onclick="modalView(this)">
+        </div>
+        <div class="content" id="p20190306">
+            <img id="thumbImg" src="../media/old-layout.jpg" onclick="modalView(this)">
+        </div>
+    </div>
+    
+    <div id="mo" onclick="this.style.display='none'">
+        <img id="fullImg">
     </div>
 </body>
 <script>

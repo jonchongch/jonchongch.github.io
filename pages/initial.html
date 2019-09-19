@@ -14,68 +14,54 @@ font-size: 10pt
 /*////////////////////
 GRID : Template
 ////////////////////*/   
-.grid-title {
+
+.grid-page {
 display: grid;
 grid-template: none / 20% 20% 20% 20% 20%;
 margin: 5px;
 padding: 5px;
 }
-.grid-title > div {
+.grid-page > div {
 margin: 5px;
 }
     
 /*////////////////////
 SECTION : About
 ////////////////////*/
+
 .abt{
-grid-column: 1 / span 3;
+grid-area: 1 / 1 / auto / span 2;
 padding: 0;
 padding-bottom: 0;
-border-bottom: 0;
 border-right: 10px solid #000;
+border-bottom: 0;
 }
-.abt, .abt > h1, .abt > p{
+.abt{
 margin: 0;
-font-size: 2.2em;
+font-size: 1em;
 font-weight: bold;
 text-transform: uppercase;
 line-height: 1em;
 }
+.abt > h1{
+margin: 0;
+font-size: 3.5em;
+font-weight: bold;
+text-transform: uppercase;
+line-height: 1em;
+}
+.abt > p{
+margin: 0;
+font-size: 3.5em;
+font-weight: bold;
+text-transform: uppercase;
+line-height: 1em;
+}
+    
 /*//////////////////////////////////////////////////////////////
 RESPONSIVE : Desktop
 //////////////////////////////////////////////////////////////*/
-@media screen and (max-width : 1280px){
-/*////////////////////
-GRID : Template
-////////////////////*/   
-.grid-title {
-display: grid;
-grid-template: none / 20% 20% 20% 20% 20%;
-margin: 5px;
-padding: 5px;
-}
-.grid-title > div {
-margin: 5px;
-}
 
-/*////////////////////
-SECTION : About
-////////////////////*/
-.abt{
-grid-column: 1 / span 3;
-padding: 0;
-padding-bottom: 0;
-border-bottom: 0;
-border-right: 10px solid #000;
-}
-.abt, .abt > h1, .abt > p{
-margin: 0;
-font-size: 2.2em;
-font-weight: bold;
-text-transform: uppercase;
-line-height: 1em;
-}
-}
 /*//////////////////////////////////////////////////////////////
 RESPONSIVE : Tablet
 //////////////////////////////////////////////////////////////*/
@@ -83,13 +69,13 @@ RESPONSIVE : Tablet
 /*////////////////////
 GRID : Template
 ////////////////////*/   
-.grid-title {
+.grid-page {
 display: grid;
 grid-template: none / 25% 25% 25% 25%;
 margin: 5px;
 padding: 5px;
 }
-.grid-title > div {
+.grid-page > div {
 margin: 5px;
 }
 
@@ -103,9 +89,23 @@ padding-bottom: 20px;
 border-bottom: 10px solid #000;
 border-right: 0;
 }
-.abt, .abt > h1, .abt > p{
+.abt{
 margin: 0;
-font-size: 2em;
+font-size: 1em;
+font-weight: bold;
+text-transform: uppercase;
+line-height: 1em;
+}
+.abt > h1{
+margin: 0;
+font-size: 3em;
+font-weight: bold;
+text-transform: uppercase;
+line-height: 1em;
+}
+.abt > p{
+margin: 0;
+font-size: 3em;
 font-weight: bold;
 text-transform: uppercase;
 line-height: 1em;
@@ -119,13 +119,13 @@ RESPONSIVE : Mobile
 /*////////////////////
 GRID : Template
 ////////////////////*/   
-.grid-title {
+.grid-page {
 display: grid;
 grid-template: auto / 50% 50%;
 margin: 5px;
 padding: 5px;
 }
-.grid-title > div {
+.grid-page > div {
 margin: 5px;
 }
 
@@ -139,9 +139,23 @@ padding-bottom: 20px;
 border-bottom: 10px solid #000;
 border-right: 0;
 }
-.abt, .abt > h1, .abt > p{
+.abt{
 margin: 0;
-font-size: 1.8em;
+font-size: 1em;
+font-weight: bold;
+text-transform: uppercase;
+line-height: 1em;
+}
+.abt > h1{
+margin: 0;
+font-size: 3.25em;
+font-weight: bold;
+text-transform: uppercase;
+line-height: 1em;
+}
+.abt > p{
+margin: 0;
+font-size: 3.25em;
 font-weight: bold;
 text-transform: uppercase;
 line-height: 1em;
@@ -150,14 +164,13 @@ line-height: 1em;
     
 </style>
 <body>
-    <div class="grid-title">
+    <div class="grid-page">
         <div class="abt">
             <h1>I am Jonathan</h1>
             <p>
                 And these are my passion for Graphic Design
             </p>
         </div>
-        <div class=""><br /></div>
     </div>
 </body>
 <script>

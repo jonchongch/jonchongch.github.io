@@ -119,11 +119,13 @@ position: relative;
 margin: 0;
 padding: 0;
 width: 100%;
+height: 100vh;
 }
 #content-panel > object{
 width: 100%;
+height: 100%;
 }
-#content-panel > object#content{
+#content-panel > object#mainContent{
 }
 /*//////////////////////////////////////////////////////////////
 RESPONSIVE : Desktop
@@ -219,11 +221,13 @@ position: relative;
 margin: 0;
 padding: 0;
 width: 100%;
+height: 90vh;
 }
 #content-panel > object{
 width: 100%;
+height: 100%;
 }
-#content-panel > object#content{
+#content-panel > object#mainContent{
 }
 }
 </style>
@@ -261,14 +265,14 @@ width: 100%;
             </div>
 
             <div id="content-panel">    
-                <object id="content" type="text/html"></object>
+                <object id="mainContent" type="text/html"></object>
             </div>
         </section>
     </div>
 </body>
 
 <script>
-const obj = document.getElementById('content');
+const obj = document.getElementById('mainContent');
 window.addEventListener('message', (evt) => {
     const msg = evt.data;
     console.log(evt);
