@@ -1,0 +1,118 @@
+body {
+margin: 0;
+padding: 0;
+border: 0;
+}
+body {
+font-family: 'Open Sans', sans-serif;
+font-size: 12pt;
+}
+* {
+margin: 0;
+padding: 0;
+border: 0;
+line-height: 1em;
+list-style: none;
+text-decoration: none;
+}
+section{
+display: block;
+margin: 0 10px;
+padding: 0;
+}
+section > h1{
+font-size: 1.8em;
+font-weight: bold;
+text-transform: uppercase;
+}
+.active{
+display:block!important;
+}
+/*///////////////////////////////////////////
+Layout : Index
+
+grid-template:
+rows (height) / cols (width)
+
+grid-area:
+row start / col start / row end / col end 
+
+///////////////////////////////////////////*/
+div.index_lo {
+display: grid;
+grid-template: 100vh / 10% 90%;
+grid-gap: 0;
+}
+div.index_lo > div.nav{
+grid-area: 1 / 1 / 1 / 1;
+position: fixed;
+width: 10%;
+border-right: 1px solid #8e8e8e80;
+border-bottom: none;
+z-index: 99999;
+}
+div.index_lo > div#content{
+grid-area: 1 / 2 / 1 / 2;
+position: relative;
+width: 100%;
+}
+/*///////////////////////////////////////////
+Layout : Nav
+///////////////////////////////////////////*/
+div.nav_lo{
+display: grid;
+grid-template: 80vh 20vh / 100%;
+grid-gap: 0;
+}
+div.nav_lo > ul.links {
+grid-area: 1 / 1 / 1 / 1;
+position: relative;
+width: 100%;
+}
+div.nav_lo > ul.social {
+grid-area: 2/ 1 / 2 / 1;
+position: relative;
+width: 100%;
+}
+/*///////////////////////////////////////////
+Nav Style
+///////////////////////////////////////////*/
+div.nav > nav{
+display: block;
+position: relative;
+width: 100%;
+height: 100vh;
+}
+nav > div > ul {
+display: block;
+background-color: #fff;
+margin: 0;
+padding: 0;
+}
+nav > div > ul > li{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+width: 100%;
+margin: 0;
+padding: 0;
+}
+nav > div > ul > li > a {
+display: block;
+position: relative;
+margin: 0;
+padding:10px 10px 0 10px;
+width: 100%;
+color: #404040;
+font-weight: 300;
+}
+nav > div > ul > li > a > span{
+text-transform: uppercase;
+}
+.social > li > a {
+font-size: 14pt;
+}
+/*///////////////////////////////////////////
+
+///////////////////////////////////////////*/

@@ -1,313 +1,118 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <script src="https://kit.fontawesome.com/ad42bd9076.js"></script>
+<title>Jonathan Chong</title>
+<script src="https://kit.fontawesome.com/ad42bd9076.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/styles_font.css">
+<link rel="stylesheet" type="text/css" href="../css/styles_index.css">
+<link rel="stylesheet" type="text/css" href="../css/styles_index-480.css" media="screen and (max-width: 480px)">
+<link rel="stylesheet" type="text/css" href="../css/styles_index-768.css" media="screen and (min-width: 481px) and (max-width: 768px)">
+<link rel="stylesheet" type="text/css" href="../css/styles_pages.css">
+
 </head>
 
-<style>
-/*//////////////////////////////////////////////////////////////
-Default
-//////////////////////////////////////////////////////////////*/
-body{
-margin: 0;
-padding: 0;
-border: none;
-}
-body{
-font-family: sans-serif;
-font-size: 10pt;
-}
-body > div{
-position: relative;
-width: 100%;
-height: 100%;
-}
-body > .bg{
-position: fixed;
-width: 100%;
-height: 100%;
-background-image: url(media/army_green.png);
-background-size: cover;
-background-repeat: no-repeat;
-}
-section{
-position: relative;
-margin: 0;
-padding: 0;
-}
-    
-/*////////////////////
-GRID : Template
-////////////////////*/
-.grid-layout{
-display: grid;
-grid-template: auto / 120px auto ;
-}
-    
-/*////////////////////
-SECTION : Navigation
-////////////////////*/
-    
-#nav-panel{
-grid-area: 1 / 1 / auto / auto;
-display: block;
-position: fixed;
-height: 100%;
-width: 100px;
-background: rgba(0,0,0,0.8)
-}
-#nav-panel > ul{
-display: block;
-margin: 0;
-padding: 0;
-height: 65px;
-list-style: none;
-}
-#nav-panel > ul > li{
-display: block;
-margin: 0 auto;
-padding: 0;
-text-align: center;
-vertical-align: middle;
-}
-#nav-panel > ul > li:first-child{
-display: block;
-margin: 0 auto;
-padding: 0;
-text-align: center;
-vertical-align: middle;
-border-right: none;
-border-bottom: 1px solid #fff;
-}
-#nav-panel > ul > li > a{
-position: relative;
-display: table;
-margin: 20px auto;
-height: 100%;
-text-decoration: none;
-color: #fff;
-}
-#nav-panel > ul > li > a > #logo{
-display: table-cell;
-vertical-align: middle;
-}
-#nav-panel > ul > li > a > #icon{
-display: table-cell;
-vertical-align: middle;
-}
-#nav-panel > ul > li > a > #logo > img{
-display: inline-block;
-width: 100%;
-}
-#nav-panel > ul > li > a > #icon > i{
-font-size: 2.2em;
-margin-bottom: 3px;
-}
-#nav-panel > ul > li > a > #icon > span{
-font-size: 0.8em;
-}
-    
-/*////////////////////
-SECTION : Content
-////////////////////*/
-
-#content-panel{
-grid-area: 1 / 2 / auto / auto;
-display: block;
-position: relative;
-margin: 0;
-padding: 0;
-width: 100%;
-height: 100vh;
-}
-#content-panel > object{
-width: 100%;
-height: 100%;
-}
-#content-panel > object#mainContent{
-}
-/*//////////////////////////////////////////////////////////////
-RESPONSIVE : Desktop
-//////////////////////////////////////////////////////////////*/
-
-@media screen and (min-width : 1280px){
-}
-    
-/*//////////////////////////////////////////////////////////////
-RESPONSIVE : Mobile
-//////////////////////////////////////////////////////////////*/
-
-@media screen and (max-width : 480px){
-/*////////////////////
-GRID : Template
-////////////////////*/
-.grid-layout{
-display: grid;
-grid-template: 65px auto / 100% ;
-}
-    
-/*////////////////////
-SECTION : Navigation
-////////////////////*/
-    
-#nav-panel{
-grid-area: 1 / 1 / auto / auto;
-display: block;
-position: fixed;
-height: auto;
-width: 100%;
-background: rgba(0,0,0,0.8)
-}
-#nav-panel > ul{
-display: table;
-margin: 0;
-padding: 0;
-height: 65px;
-list-style: none;
-}
-#nav-panel > ul > li{
-display: table-cell;
-margin: 0 auto;
-padding: 0 0 0 15px;
-text-align: center;
-vertical-align: middle;
-}
-#nav-panel > ul > li:first-child{
-display: table-cell;
-margin: 0 auto;
-padding: 0;
-text-align: center;
-vertical-align: middle;
-border-right: 1px solid #fff;
-border-bottom: none;
-}
-#nav-panel > ul > li > a{
-position: relative;
-display: table;
-margin: 0 auto;
-height: 100%;
-text-decoration: none;
-color: #fff;
-}
-#nav-panel > ul > li > a > #logo{
-display: table-cell;
-vertical-align: middle;
-}
-#nav-panel > ul > li > a > #icon{
-display: table-cell;
-vertical-align: middle;
-}
-#nav-panel > ul > li > a > #logo > img{
-display: inline-block;
-width: 75px;
-}
-#nav-panel > ul > li > a > #icon > i{
-font-size: 1.8em;
-margin-bottom: 3px;
-}
-#nav-panel > ul > li > a > #icon > span{
-font-size: 0.8em;
-}
-    
-/*////////////////////
-SECTION : Content
-////////////////////*/
-
-#content-panel{
-grid-area: 2 / 1 / auto / auto;
-display: block;
-position: relative;
-margin: 0;
-padding: 0;
-width: 100%;
-height: 90vh;
-}
-#content-panel > object{
-width: 100%;
-height: 100%;
-}
-#content-panel > object#mainContent{
-}
-}
-</style>
-
 <body>
-    <div class="bg">
-        <section class="grid-layout">
-            <div id="nav-panel">
-                <ul>
-                    <li>
-                        <a href ="#" onclick="load_home()">
-                            <div id="logo">
-                                <img src="media/jn-01.svg">
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href ="#" onclick="load_gallery()">
-                            <div id="icon">
-                                <i class="fas fa-images"></i>
-                                <br />
-                                <span>GALLERY</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li id="contact">
-                        <a href ="#" onclick="load_contact()">
-                            <div id="icon">
-                                <i class="fas fa-address-book"></i><br />
-                                <span>CONTACT</span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+	<div class="index_lo">
+		<div class="nav">
+			<nav>
+				<div class="nav_lo">
+					<ul class="links">
+						<li><a id="pg" href="#start"><i class="logo fa-jn-02"></i></a></li>
+						<li><a id="pg" href="#done"><span>Done</span></a></li>
+						<!--<li><a id="pg" href="#fun"><span>Fun</span></a></li>-->
+						<li><a target="_blank" href="https://jonchongch.github.io/pages/cv-jon.html"><span>CV</span></a></li>
+					</ul>
+					<ul class="social">
+						<li><a href="mailto:jon.chong.ch@gmail.com" target="_blank"><i class="fas fa-at"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/jonchongch" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+						<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
 
-            <div id="content-panel">    
-                <object id="mainContent" type="text/html"></object>
-            </div>
-        </section>
-    </div>
+		<div id="content" onload="startCon ()">
+<!--========================================
+Content
+=========================================-->
+<!-- Start -->
+				<!-- <section id="start" class="active">
+					<p style="height: 2000px">Start : Content</p>
+				</section> -->
+<!-- Branding -->
+				<!-- <section id="work" class="">
+					<p style="height: 2000px">Work : Content</p>
+				</section> -->
+<!-- Illustrations -->
+				<!-- <section id="play" class="">
+					<p style="height: 2000px">Play : Content</p>
+				</section> -->
+<!--========================================
+Content End
+=========================================-->
+		</div>
+	</div>
+<!--========================================
+Script
+=========================================-->
+	<script>
+		// document.querySelectorAll("nav ul li a").forEach(function(a){
+		// 	a.addEventListener("click", function(){
+		// 		var b = this.getAttribute("href").substring(1);
+		// 		var c = document.getElementsByTagName("section");
+		// 		for (var i = 0; i < c.length; i++){
+		// 			if (c[i].classList.contains("active")){
+		// 				c[i].classList.remove("active")
+		// 				document.getElementById(b).classList.add("active")
+		// 			} else {
+		// 				document.getElementById(b).classList.add("active")
+		// 			}
+		// 		}
+		// 	});
+		// });
+
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("content").innerHTML =
+			this.responseText;
+			}
+		};
+		xhttp.open("GET", "https://jonchongch.github.io/pages/start.html", true);
+		xhttp.send();
+
+		document.querySelectorAll("nav ul li a#pg").forEach(function(a){
+			a.addEventListener("click", function(){
+				var page = this.getAttribute("href").substring(1);
+				var url = "https://jonchongch.github.io/pages/" + page + ".html";
+				var loadCon = document.getElementById("content");
+				var xhttp = new XMLHttpRequest();
+
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+					loadCon.innerHTML = this.responseText;
+					}
+				};
+
+				xhttp.open("GET", url, true);
+				xhttp.send();
+			});
+		});
+
+		function getSrc(){
+			var srcLocation = document.getElementById("thBox").getAttribute("src");
+			var endUrl = srcLocation.lastIndexOf("-");
+			var srcUrl = srcLocation.substring( 0 ,endUrl);
+			
+			document.getElementById("loadBox").classList.add("cf");
+			document.getElementById("loadHere").src = srcUrl + "-full.jpg";
+		};
+
+		function rmSrc(){
+			document.getElementById("loadBox").classList.remove("cf");
+		};
+
+	</script>
 </body>
-
-<script>
-const obj = document.getElementById('mainContent');
-window.addEventListener('message', (evt) => {
-    const msg = evt.data;
-    console.log(evt);
-//  a simple check to be sure we are talking to #obj's content
-    if(msg.type === "set-size") {
-        obj.width = msg.width;
-        obj.height = msg.height;
-        };
-});
-
-obj.data = 'pages/initial.html';
-
-function resizedContent(obj) {
-    obj.width  = obj.contentWindow.document.body.scrollWidth;
-    obj.height = obj.contentWindow.document.body.scrollHeight;
-}
-
-window.addEventListener('resize', function(e) {
-    resizedContent(obj);
-// or, to resize all iframes:
-//    var objects = document.querySelectorAll("objects1");
-//    for( var i = 0; i < iframes.length; i++) {
-//        resizedContent( object[i] );
-//    }
-} );
-
-function load_home(){
-        obj.setAttribute('data', 'pages/initial.html');
-        }
-function load_gallery(){
-        obj.setAttribute('data', 'pages/gallery.html');
-        }
-function load_contact(){
-        obj.setAttribute('data', 'pages/err.html');
-        }
-
-</script>
-</html>
