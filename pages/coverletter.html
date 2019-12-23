@@ -1,0 +1,171 @@
+<style>
+body{
+margin: 0 auto;
+padding: 0;
+width: 794px;
+text-align: left;
+font-family: sans-serif;
+font-size: 10pt;
+}
+section{
+position: relative;
+margin: 0;
+padding: 0;
+width: 794px;
+height: 1122.52px;
+border: 1px solid #f3f3f3;
+}
+input{
+border: none;
+width:75%;
+font-size: 10pt;
+}
+.grid-cont{
+position: relative;
+display: grid;
+margin: 25px;
+grid-gap: 5px 10px;
+grid-template-columns: 18.9% 18.9% 18.9% 18.9% 18.9%;
+}   
+.block{
+grid-column: 1;
+border-top: 5px solid #000;
+}   
+.space{
+grid-column: 1 / span 5;
+margin: 7.5% 0;
+}
+.md{
+grid-column: 4 / span 2;
+position: relative;
+margin: 0;
+padding: 0;
+width: 100%;
+text-align: right;
+}
+.md h2{
+margin: 0;
+}
+.ed{
+grid-column: 2 / span 2;
+position: relative;
+margin: 1em 0;
+padding: 0;
+width: 100%;
+text-align: left;
+}
+.cl-date{
+grid-column: 5;
+text-align: right;
+}
+.cl-re{
+margin: 1em 0;
+grid-column: 2 / span 4;
+}
+.cl-re input.position{
+font-weight: bold;
+}
+.cl-em{
+grid-column: 2 / span 2;
+}
+.cl-copy{
+grid-column: 2 / span 4;
+}
+.cl-end{
+grid-column: 2 / span 2;
+}
+</style>
+<body>
+<section>
+    
+<div class="grid-cont">
+        
+    <div class="block"></div>
+    
+    <div class="space"></div>
+    
+    <div class="md">
+        <h2>Jonathan Chong</h2>
+        <span><strong>Email:</strong> jon.chong.ch@gmail.com</span>
+    </div>
+    
+    <div class="ed">
+            <input id="employer" type="text" placeholder="Employer Name"><br />
+            <input id="read" type="text" placeholder="Company"><br />
+            <input id="read" type="text" placeholder="Email" data-log><br />
+    </div>
+    
+    <div class="cl-date">
+        <p id="date"></p>
+    </div>
+    
+    <div class="cl-re">
+            <strong>RE: Application for <input id="read" class="position" type="text" placeholder="Position" data-log></strong><br />
+    </div>
+    
+    <div class="cl-em">
+        <p>
+        Dear <span id="name"></span>,
+        </p>
+    </div>
+    
+    <div class="cl-copy">
+        <p>
+            As a motivated individual who have seen the opportunities you are providing in this job posting, I am beyond doubt interested in submitting an application for the position.
+        </p>
+        <p>
+            I have completed my diploma studies in May 2015 as a graphic designer and I have obtained a diploma certification in Design Communications from Lasalle College of the Arts, located in Singapore.
+        </p>
+        <p>
+           While completing my studies, I took up freelance assignments from various companies. Coding website and designing banners for print and web were part of my responsibilities as a freelance designer. About a year into freelancing, I received a job offer from a large retail company, COURTS Singapore as a web content executive. My responsibilities were to manage all assets and to ensure they meet the standards set by stake holders. Being in COURTS Singapore enables me to experience a professional, fast-paced work environment. 
+        </p>
+        <p>
+            I am certain that with the opportunities you are providing, you will indefinitely receive a large number of applicants for this role. However I do believe with my pre-existing skills, I fit this role. With the motivation and dedication I have invested, I am committed to give my very best support to your organisational needs.
+        </p>
+        <p>
+            I would appreciate an opportunity to make an arrangement to discuss the details of my application over an interview online or in person. While you are in consideration, I have attached my resume in line with this cover letter for your perusal.
+        </p>
+        <p>
+            Thank you for your time,
+        </p>
+    </div>
+    
+    <div class="cl-end">
+        <p>
+            Sincerely yours,<br />
+            Jonathan
+        </p>
+    </div>
+    
+</div>
+
+</section>
+</body>
+
+<script>
+n =  new Date();
+month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"];
+y = n.getFullYear();
+m = month[n.getMonth()];
+d = n.getDate();
+document.getElementById("date").innerHTML = d + " " + m + " " + y;
+    
+var em = document.getElementById("employer");
+em.addEventListener("keyup",function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        this.readOnly = true;
+        document.getElementById("name").innerHTML = em.value;
+    }
+});
+    
+var ro = document.querySelectorAll("#read");
+for (var i = 0, max = ro.length; i < max; i++) {
+ro[i].addEventListener("keyup",function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        this.readOnly = true;
+    }
+})};
+
+</script>
