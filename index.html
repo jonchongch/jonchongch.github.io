@@ -108,27 +108,14 @@ Script
 			});
 		});
 
-		document.querySelectorAll("#thBox").forEach( 
-			el => el.addEventListener("click",
-				event => {
-					const imgSrc = el.querySelector(".gc .gct img").src;
-					var locate = imgSrc.lastIndexOf("-");
-					var reSrc =  imgSrc.substring(0,locate);
-
-					document.getElementById("loadBox").classList.add("cf");
-					document.getElementById("loadHere").src = reSrc + "-full.jpg";
-					}
-			)
-		);
-
-		// function getSrc(){
-		// 	var srcLocation = document.getElementById("thBox").getAttribute("src");
-		// 	var endUrl = srcLocation.lastIndexOf("-");
-		// 	var srcUrl = srcLocation.substring( 0 ,endUrl);
+		function getSrc(_src){
+			var imgSrc = document.getElementById("thBox").getAttribute("src");
+			var location = imgSrc.lastIndexOf("-");
+			var reSrc = imgSrc.substring( 0 ,location);
 			
-		// 	document.getElementById("loadBox").classList.add("cf");
-		// 	document.getElementById("loadHere").src = srcUrl + "-full.jpg";
-		// };
+			document.getElementById("loadBox").classList.add("cf");
+			document.getElementById("loadHere").src = srcUrl + "-full.jpg";
+		};
 
 		function rmSrc(){
 			document.getElementById("loadBox").classList.remove("cf");
