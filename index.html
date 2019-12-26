@@ -109,9 +109,8 @@ Script
 		});
 
 		function getSrc(_src){
-			const imgSrc = document.getElementById("thBox").getAttribute("src");
-			var location = imgSrc.lastIndexOf("-");
-			var reSrc = imgSrc.substring( 0 ,location);
+			var locateSrc = _src.lastIndexOf("-");
+			var reSrc = _src.substring( 0 ,locateSrc);
 			
 			document.getElementById("loadBox").classList.add("cf");
 			document.getElementById("loadHere").src = reSrc + "-full.jpg";
