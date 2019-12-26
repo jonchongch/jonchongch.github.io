@@ -11,6 +11,12 @@
 <link rel="stylesheet" type="text/css" href="https://jonchongch.github.io/css/styles_index-768.css" media="screen and (min-width: 481px) and (max-width: 768px)">
 <link rel="stylesheet" type="text/css" href="https://jonchongch.github.io/css/styles_pages.css">
 
+<!-- <link rel="stylesheet" type="text/css" href="css/styles_font.css">
+<link rel="stylesheet" type="text/css" href="css/styles_index.css">
+<link rel="stylesheet" type="text/css" href="css/styles_index-480.css" media="screen and (max-width: 480px)">
+<link rel="stylesheet" type="text/css" href="css/styles_index-768.css" media="screen and (min-width: 481px) and (max-width: 768px)">
+<link rel="stylesheet" type="text/css" href="css/styles_pages.css"> -->
+
 </head>
 
 <body>
@@ -27,7 +33,7 @@
 					<ul class="social">
 						<li><a href="mailto:jon.chong.ch@gmail.com" target="_blank"><i class="fas fa-at"></i></a></li>
 						<li><a href="https://www.linkedin.com/in/jonchongch" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-						<!--<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+						<!-- <li><a href="#"><i class="fab fa-facebook"></i></a></li>
 						<li><a href="#"><i class="fab fa-instagram"></i></a></li> -->
 					</ul>
 				</div>
@@ -102,7 +108,7 @@ Script
 			});
 		});
 
-		function getSrc(){
+		function getSrc(this){
 			var srcLocation = document.getElementById("thBox").getAttribute("src");
 			var endUrl = srcLocation.lastIndexOf("-");
 			var srcUrl = srcLocation.substring( 0 ,endUrl);

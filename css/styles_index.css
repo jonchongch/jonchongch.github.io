@@ -71,8 +71,9 @@ width: 100%;
 }
 div.nav_lo > ul.social {
 grid-area: 2/ 1 / 2 / 1;
-position: relative;
+position: absolute;
 width: 100%;
+bottom: 10px;
 }
 /*///////////////////////////////////////////
 Nav Style
@@ -85,7 +86,7 @@ height: 100vh;
 }
 nav > div > ul {
 display: block;
-background-color: #fff;
+/* background-color: #fff; */
 margin: 0;
 padding: 0;
 }

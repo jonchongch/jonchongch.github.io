@@ -74,6 +74,7 @@ div.nav_lo > ul.social {
 grid-area: 1/ 2 / 1 / 2;
 position: relative;
 width: 100%;
+bottom: 0;
 }
 /*///////////////////////////////////////////
 Nav Style
@@ -86,7 +87,7 @@ height: 10vh;
 }
 nav > div > ul {
 display: block;
-background-color: #fff;
+/* background-color: #fff; */
 margin: 0;
 padding: 0;
 }
