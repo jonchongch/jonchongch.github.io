@@ -2,14 +2,13 @@
 <html>
 <head>
 <title>Jonathan Chong</title>
-<meta name="viewport" content="width=device-width">
 <script src="https://kit.fontawesome.com/ad42bd9076.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="https://jonchongch.github.io/css/styles_font.css">
-<link rel="stylesheet" type="text/css" href="https://jonchongch.github.io/css/styles_index.css">
-<link rel="stylesheet" type="text/css" href="https://jonchongch.github.io/css/styles_index-480.css" media="screen and (max-width: 480px)">
-<link rel="stylesheet" type="text/css" href="https://jonchongch.github.io/css/styles_index-768.css" media="screen and (min-width: 481px) and (max-width: 768px)">
-<link rel="stylesheet" type="text/css" href="https://jonchongch.github.io/css/styles_pages.css">
+<link rel="stylesheet" type="text/css" href="fonts/styles_font.css">
+<link rel="stylesheet" type="text/css" href="css/styles_index.css">
+<link rel="stylesheet" type="text/css" href="css/styles_index-480.css" media="screen and (max-width: 480px)">
+<link rel="stylesheet" type="text/css" href="css/styles_index-768.css" media="screen and (min-width: 481px) and (max-width: 768px)">
+<link rel="stylesheet" type="text/css" href="css/styles_pages.css">
 
 </head>
 
@@ -22,13 +21,13 @@
 						<li><a id="pg" href="#start"><i class="logo fa-jn-02"></i></a></li>
 						<li><a id="pg" href="#done"><span>Done</span></a></li>
 						<!--<li><a id="pg" href="#fun"><span>Fun</span></a></li>-->
-						<li><a target="_blank" href="https://jonchongch.github.io/pages/cv-jon.html"><span>CV</span></a></li>
+						<li><a target="_blank" href="pages/cv-jon.html"><span>CV</span></a></li>
 					</ul>
 					<ul class="social">
 						<li><a href="mailto:jon.chong.ch@gmail.com" target="_blank"><i class="fas fa-at"></i></a></li>
 						<li><a href="https://www.linkedin.com/in/jonchongch" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-						<!--<li><a href="#"><i class="fab fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fab fa-instagram"></i></a></li> -->
+						<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fab fa-instagram"></i></a></li>
 					</ul>
 				</div>
 			</nav>
@@ -81,13 +80,13 @@ Script
 			this.responseText;
 			}
 		};
-		xhttp.open("GET", "https://jonchongch.github.io/pages/start.html", true);
+		xhttp.open("GET", "pages/start.html", true);
 		xhttp.send();
 
 		document.querySelectorAll("nav ul li a#pg").forEach(function(a){
 			a.addEventListener("click", function(){
 				var page = this.getAttribute("href").substring(1);
-				var url = "https://jonchongch.github.io/pages/" + page + ".html";
+				var url = "pages/" + page + ".html";
 				var loadCon = document.getElementById("content");
 				var xhttp = new XMLHttpRequest();
 
@@ -102,7 +101,7 @@ Script
 			});
 		});
 
-		function getSrc(){
+		function getSrc(this){
 			var srcLocation = document.getElementById("thBox").getAttribute("src");
 			var endUrl = srcLocation.lastIndexOf("-");
 			var srcUrl = srcLocation.substring( 0 ,endUrl);
