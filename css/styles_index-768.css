@@ -42,6 +42,7 @@ div.index_lo > div.nav{
 grid-area: 1 / 1 / 1 / 1;
 position: fixed;
 width: 15%;
+background-color: #ffffff;
 border-right: 1px solid #8e8e8e80;
 border-bottom: none;
 z-index: 99999;
