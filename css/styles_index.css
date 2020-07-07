@@ -33,7 +33,7 @@ div.index_lo > div.nav{
 display: none;
 }
 div.index_lo > div#content{
-grid-area: 1 / 1 / 1 / 2;
+grid-area: 1 / 2 / 1 / 2;
 position: relative;
 width: 100%;
 margin-left: -11%;
