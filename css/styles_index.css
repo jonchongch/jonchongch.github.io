@@ -28,6 +28,11 @@ text-transform: uppercase;
 .active{
 display:block!important;
 }
+@media print{
+div.nav{
+display: none;
+}
+}
 /*///////////////////////////////////////////
 Layout : Index
 
