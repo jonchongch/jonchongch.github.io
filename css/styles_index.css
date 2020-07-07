@@ -29,8 +29,13 @@ text-transform: uppercase;
 display:block!important;
 }
 @media print{
-div.nav{
+div.index_lo > div.nav{
 display: none;
+}
+div.index_lo > div#content{
+grid-area: 1 / 1 / 1 / 2;
+position: relative;
+width: 100%;
 }
 }
 /*///////////////////////////////////////////
