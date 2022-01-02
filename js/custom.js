@@ -42,7 +42,7 @@
 			});
 		});
 
-		document.querySelectorAll("#content a#wb").forEach(function(a){
+		document.querySelectorAll("#content div a#wb").forEach(function(a){
 			a.addEventListener("click", function(){
 				var page = this.getAttribute("href").substring(1);
 				var url = "./pages/" + page + ".html";
