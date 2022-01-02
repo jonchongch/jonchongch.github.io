@@ -27,9 +27,9 @@
 				<div class="nav_lo">
 					<ul class="links">
 						<li><a id="pg" href="#done"><i class="logo fa-jn-02"></i></a></li>
-						<li><a id="pg" href="#test1"><span>Test1</span></a></li>
 						<li><a id="pg" href="#cv-jon"><span>CV Jon</span></a></li>
 						<li><a id="pg" href="#cv-juli"><span>CV Juli</span></a></li>
+						<!-- <li><a id="pg" href="#test1"><span>Test1</span></a></li> -->
 						<!-- <li><a id="pg" href="#start"><i class="logo fa-jn-02"></i></a></li>
 						<li><a id="pg" href="#done"><span>Done</span></a></li>
 						<li><a id="pg" href="#fun"><span>Fun</span></a></li>
@@ -65,8 +65,7 @@ Content
 Content End
 =========================================-->
 
-</div>
-<div id="details"></div>
+		</div>
 	</div>
 <!--========================================
 Script
@@ -102,24 +101,6 @@ Script
 				var page = this.getAttribute("href").substring(1);
 				var url = "./pages/" + page + ".html";
 				var loadCon = document.getElementById("content");
-				var xhttp = new XMLHttpRequest();
-
-				xhttp.onreadystatechange = function() {
-					if (this.readyState == 4 && this.status == 200) {
-					loadCon.innerHTML = this.responseText;
-					}
-				};
-
-				xhttp.open("GET", url, true);
-				xhttp.send();
-			});
-		});
-		
-		document.getElementById("wb").forEach(function(a){
-			a.addEventListener("click", function(){
-				var page = this.getAttribute("href").substring(1);
-				var url = "./pages/" + page + ".html";
-				var loadCon = document.getElementById("details");
 				var xhttp = new XMLHttpRequest();
 
 				xhttp.onreadystatechange = function() {
