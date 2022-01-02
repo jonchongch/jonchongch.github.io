@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jonathan Chong</title>
+<meta name="viewport" content="width=device-width">
+<link rel="icon" href="https://jonchongch.github.io/ico/jn_02.ico" type="image/x-icon" />
+<script src="https://kit.fontawesome.com/ad42bd9076.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://jonchongch.github.io/css/styles_font.css">
+<link rel="stylesheet" type="text/css" href="https://jonchongch.github.io/css/styles_index.css">
+<link rel="stylesheet" type="text/css" href="https://jonchongch.github.io/css/styles_index-480.css" media="screen and (max-width: 480px)">
+<link rel="stylesheet" type="text/css" href="https://jonchongch.github.io/css/styles_index-768.css" media="screen and (min-width: 481px) and (max-width: 768px)">
+<link rel="stylesheet" type="text/css" href="https://jonchongch.github.io/css/styles_pages.css">
+
+<!-- <link rel="stylesheet" type="text/css" href="css/styles_font.css">
+<link rel="stylesheet" type="text/css" href="css/styles_index.css">
+<link rel="stylesheet" type="text/css" href="css/styles_index-480.css" media="screen and (max-width: 480px)">
+<link rel="stylesheet" type="text/css" href="css/styles_index-768.css" media="screen and (min-width: 481px) and (max-width: 768px)">
+<link rel="stylesheet" type="text/css" href="css/styles_pages.css"> -->
+
+</head>
+
+<body>
+	<div class="index_lo">
+		<div class="nav">
+			<nav>
+				<div class="nav_lo">
+					<ul class="links">
+						<li><a id="pg" href="#done"><i class="logo fa-jn-02"></i></a></li>
+						<li><a id="pg" href="#cv-jon"><span>CV Jon</span></a></li>
+						<li><a id="pg" href="#cv-juli"><span>CV Juli</span></a></li>
+						<!-- <li><a id="pg" href="#start"><i class="logo fa-jn-02"></i></a></li>
+						<li><a id="pg" href="#done"><span>Done</span></a></li>
+						<li><a id="pg" href="#fun"><span>Fun</span></a></li>
+						<li><a target="_blank" href="https://jonchongch.github.io/pages/cv-jon.html"><span>CV</span></a></li> -->
+					</ul>
+					<ul class="social">
+						<li><a href="mailto:jon.chong.ch@gmail.com" target="_blank"><i class="fas fa-at"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/jonchongch" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+						<!-- <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fab fa-instagram"></i></a></li> -->
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<div id="content" onload="startCon ()">
+<!--========================================
+Content
+=========================================-->
+<!-- Start -->
+				<!-- <section id="start" class="active">
+					<p style="height: 2000px">Start : Content</p>
+				</section> -->
+<!-- Branding -->
+				<!-- <section id="work" class="">
+					<p style="height: 2000px">Work : Content</p>
+				</section> -->
+<!-- Illustrations -->
+				<!-- <section id="play" class="">
+					<p style="height: 2000px">Play : Content</p>
+				</section> -->
+<!--========================================
+Content End
+=========================================-->
+		</div>
+	</div>
+<!--========================================
+Script
+=========================================-->
+	<script>
+		// document.querySelectorAll("nav ul li a").forEach(function(a){
+		// 	a.addEventListener("click", function(){
+		// 		var b = this.getAttribute("href").substring(1);
+		// 		var c = document.getElementsByTagName("section");
+		// 		for (var i = 0; i < c.length; i++){
+		// 			if (c[i].classList.contains("active")){
+		// 				c[i].classList.remove("active")
+		// 				document.getElementById(b).classList.add("active")
+		// 			} else {
+		// 				document.getElementById(b).classList.add("active")
+		// 			}
+		// 		}
+		// 	});
+		// });
+
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("content").innerHTML =
+			this.responseText;
+			}
+		};
+		xhttp.open("GET", "https://jonchongch.github.io/pages/done.html", true);
+		xhttp.send();
+
+		document.querySelectorAll("nav ul li a#pg").forEach(function(a){
+			a.addEventListener("click", function(){
+				var page = this.getAttribute("href").substring(1);
+				var url = "https://jonchongch.github.io/pages/" + page + ".html";
+				var loadCon = document.getElementById("content");
+				var xhttp = new XMLHttpRequest();
+
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+					loadCon.innerHTML = this.responseText;
+					}
+				};
+
+				xhttp.open("GET", url, true);
+				xhttp.send();
+			});
+		});
+
+		function getSrc(_src){
+			var locateSrc = _src.lastIndexOf("-");
+			var reSrc = _src.substring( 0 ,locateSrc);
+			
+			document.getElementById("loadBox").classList.add("cf");
+			document.getElementById("loadHere").src = reSrc + "-full.jpg";
+		};
+
+		function rmSrc(){
+			document.getElementById("loadBox").classList.remove("cf");
+		};
+
+	</script>
+</body>

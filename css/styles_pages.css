@@ -1,0 +1,153 @@
+
+/*///////////////////////////////////////////
+Pages - Grid Style
+///////////////////////////////////////////*/
+.gc{
+display: grid;
+grid-template: auto / repeat(4, 1fr);
+grid-gap: 0;
+z-index: -99999;
+}
+.gc > .gct{
+grid-area: auto / auto / auto / auto;
+position: relative;
+}
+sub{
+font-size: 0.5em;
+vertical-align: super;
+}
+/*///////////////////////////////////////////
+Pages - Thumbnail
+///////////////////////////////////////////*/
+#thBox{
+position: relative;
+display: block;
+margin: 0;
+padding: 0;
+width: 100%;
+}
+#thBox:hover{
+position: relative;
+opacity: 0.5;
+transition: 0.7s ease-in;
+}
+/*///////////////////////////////////////////
+Pages - Overlay
+///////////////////////////////////////////*/
+.c-none{
+display: none;
+}
+.cf{
+position: absolute;
+display: block!important;
+margin: 0 auto;
+padding: 5% 15%;
+top: 0;
+left: 0;
+right: 0;
+text-align: center;
+background: #ffffff;
+z-index: 0;
+}
+.cf > img{
+position: relative;
+}
+/*///////////////////////////////////////////
+Pages - Grid Style (width : 768px)
+///////////////////////////////////////////*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+/*///////////////////////////////////////////
+Pages - Grid Style
+///////////////////////////////////////////*/
+.gc{
+display: grid;
+grid-template: auto / repeat(3, 1fr);
+grid-gap: 0;
+z-index: -99999;
+}
+/*///////////////////////////////////////////
+Pages - Overlay
+///////////////////////////////////////////*/
+.cf{
+position: absolute;
+display: block!important;
+margin: 0 auto;
+padding: 5% 10%;
+top: 0;
+left: 0;
+right: 0;
+text-align: center;
+background: #ffffff;
+z-index: 0;
+}
+.cf > img{
+position: relative;
+}
+}
+/*///////////////////////////////////////////
+Pages - Grid Style (width : 480px)
+///////////////////////////////////////////*/
+@media screen and (max-width: 480px) {
+/*///////////////////////////////////////////
+Pages - Grid Style
+///////////////////////////////////////////*/
+.gc{
+display: grid;
+grid-template: auto / repeat(2, 1fr);
+grid-gap: 0;
+z-index: -99999;
+}
+/*///////////////////////////////////////////
+Pages - Overlay
+///////////////////////////////////////////*/
+.cf{
+position: absolute;
+display: block!important;
+margin: 0 auto;
+padding: 5% 5%;
+top: 0;
+left: 0;
+right: 0;
+text-align: center;
+background: #ffffff;
+z-index: 0;
+}
+.cf > img{
+position: relative;
+width: 100%;
+}
+}
+/*///////////////////////////////////////////
+Start.html
+///////////////////////////////////////////*/
+.start{
+font-size: 7em;
+text-transform: uppercase;
+font-weight: bold;
+font-style: italic;
+letter-spacing: -5px;
+}
+/*///////////////////////////////////////////
+Start.html (width : 768px)
+///////////////////////////////////////////*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+.start{
+font-size: 6em;
+text-transform: uppercase;
+font-weight: bold;
+font-style: italic;
+letter-spacing: -5px;
+}
+}
+/*///////////////////////////////////////////
+Start.html (width : 480px)
+///////////////////////////////////////////*/
+@media screen and (max-width: 480px) {
+.start{
+font-size: 5em;
+text-transform: uppercase;
+font-weight: bold;
+font-style: italic;
+letter-spacing: -5px;
+}
+}

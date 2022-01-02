@@ -1,0 +1,383 @@
+<style>
+/******************************************
+Default
+******************************************/
+body{
+margin: 0 auto;
+padding: 0;
+width: 100%;
+}
+section{
+position: relative;
+margin: 0;
+padding: 0;
+width: 794px;
+height: 1122.52px;
+border: 1px solid #f3f3f3;
+text-align: left;
+font-family: sans-serif;
+font-size: 9pt;
+}
+input,textarea{
+border: none;
+width:100%;
+font-size: 9pt;
+margin-bottom: 10px;
+resize: none;
+}
+ul, li {
+margin: 0;
+padding: 0;
+margin-bottom: 2px;
+list-style: none;
+}
+a,a:active,a:hover{
+text-decoration: none;
+color: #000;
+}
+.blank{
+grid-area: auto / 1 / auto / span 2;
+margin: 2% 0;
+border-top: 5px solid #ffffff00;
+}
+.block{
+grid-area: auto / 1 / auto / 1;
+margin: 2% 0;
+border-top: 5px solid #000;
+}
+/******************************************
+Page Grid Columns
+******************************************/
+.page-grid{
+position: relative;
+display: grid;
+margin: 25px 1%;
+grid-gap: 1%;
+grid-template: auto / 50% 3% 45%;
+}
+.col-left{
+grid-area: auto / 1 / auto / 1;
+}
+.col-right{
+grid-area: auto / 3 / auto / 3;
+}
+/******************************************
+Details Grid Columns
+******************************************/
+.details-grid{
+position: relative;
+display: grid;
+margin: 1% 0;
+grid-gap: 1%;
+grid-template: auto / 24% 75%;
+}
+
+.col-title{
+grid-area: auto / 1 / auto / span 2;
+font-size: 12pt;
+font-weight: bold;
+padding-bottom: 2%;
+}
+/*//////////////////////////
+List
+//////////////////////////*/
+.col-specs{
+grid-area: auto / 1 / auto / 1;
+}
+.col-props{
+grid-area: auto / 2 / auto / 2;
+}
+.col-props > ul{
+margin-left: 18px;
+}
+.col-props > ul > li:before{
+content: ':';
+margin-left: -18px;
+padding-right: 15px;
+}
+/*//////////////////////////
+descriptions
+//////////////////////////*/
+.col-desc{
+grid-area: auto / 1 / auto / span 2;
+}
+.col-desc {
+margin-bottom: 5px;
+}
+.col-desc:last-child{
+margin-bottom: 0;
+}
+.col-desc > div > h2{
+display: block;
+margin: 0;
+padding: 0;
+font-size: 10pt;
+font-weight: bold;
+}
+.col-desc > div > h3{
+display: block;
+margin: 0;
+padding: 0;
+font-size: 9pt;
+font-weight: bold;
+}
+.col-desc > div > p{
+display: block;
+margin: 0;
+padding: 0;
+}
+.col-desc > div > span{
+display: block;
+}
+.col-desc > div > a{
+display: block;
+}
+/******************************************
+Introduction Grid Column
+******************************************/
+.col-name{
+grid-area: auto / 1 / auto / span 1;
+margin-bottom: 2%;
+font-weight: bold;
+line-height: 1em;
+font-size: 22pt;
+}
+.col-sum{
+grid-area: auto / 1 / auto / 1;
+font-size: 9pt;
+}
+/******************************************
+
+******************************************/
+</style>
+<body>
+<section>
+    <div class="page-grid">
+        <div class="col-left">
+<!--========================================
+Work History
+=========================================-->
+            <div class="details-grid">
+                <div class="col-title">Work History</div>
+                <div class="block"></div>
+                <div class="col-desc">
+                    <div>
+                        <h2>Barrio by Mex Out</h2>
+                        <span>Harborfront, Singapore</span>
+                        <h3>Kitchen Crew (Mexican cuisine)</h3>
+                        <span>Sept 2018 - Feb 2019</span>
+                        <p>Food service & preparation, Dish preparation & creation(Pastry).</p>
+                    </div>
+                </div>
+                <div class="col-desc">
+                    <div>
+                        <h2>LA PEPA</h2>
+                        <span>Telok Ayer, Singapore</span>
+                        <h3>Pastry Chef (Chef de Partie)</h3>
+                        <span>Sept 2017 - Nov 2017</span>
+                        <p>Food service & preparation, New menu creation(Pastry).</p>
+                    </div>
+                </div>
+                <div class="col-desc">
+                    <div>
+                        <h2>THE REFINERY</h2>
+                        <span>Lavender, Singapore</span>
+                        <h3>Pastry Chef (Chef de Partie)</h3>
+                        <span>Mar 2017 - Aug 2017</span>
+                        <p>Kitchen Crew (Japanese/Korean/Western cuisine)<br />
+									Food service & preparation, Dish creation(Pastry).</p>
+                    </div>
+                </div>
+                <div class="col-desc">
+                    <div>
+                        <h2>ARGANA Wines</h2>
+                        <span>Buenos Aires, Argentina</span>
+                        <h3>200+pax Catering (Closed Event @ Hilton Buenos Aires)</h3>
+                        <span>Feb 2014 - Jun 2016</span>
+                        <p>Personalized cakes and fine pastries.<br />
+									Food service & preparation, New dish creation, Event & cost management.</p>
+                    </div>
+                </div>
+                <div class="col-desc">
+                    <div>
+                        <h2>Social Parties</h2>
+                        <span>Buenos Aires, Argentina</span>
+                        <h3>60+pax Catering (Intl. Cuisines: Japanese, Spanish, etc.. )</h3>
+                        <span>Mar 2013 - Feb 2015</span>
+                        <p>Personalized cakes and fine pastries.<br />
+									Food service & preparation, Dish creation, Event & cost management.</p>
+                    </div>
+                </div>
+                <div class="col-desc">
+                    <div>
+                        <h2>Local Food Fairs</h2>
+                        <span>Buenos Aires, Argentina</span>
+                        <h3>100+pax Freelance</h3>
+                        <span>Apr 2012 - Jul 2013</span>
+                        <p>Fine pastries (Chocolates bonbons)<br />
+									Food service & preparation, Dish creation, Event & cost management.</p>
+                    </div>
+                </div>
+                <div class="block"></div>
+            </div>
+        </div>
+        <div class="col-right">
+<!--========================================
+Introduction
+=========================================-->
+            <div class="col-name">Julieta Nerina Sampayo</div>
+            <div class="col-sum">
+					I’m have been a professional freelance chef for parties and social business events for years, constantly looking for ways to improve my abilities. I begin to cultivate an interest for asian cuisine
+					before coming to Singapore.
+            </div>
+            <div class="blank"></div>
+<!--========================================
+Personal Information
+=========================================-->
+            <div class="details-grid">
+                <div class="col-title">Personal Information</div>
+                <div class="col-specs">
+                    <ul>
+                        <li>Email</li>
+                        <li>Portfolio</li>
+                        <li>Instagram</li>
+                        <li>Mobile</li>
+                        <li><br /></li>
+                        <li>Address 1</li>
+                        <li>Address 2</li>
+                    </ul>
+                </div>
+                <div class="col-props">
+                    <ul>
+                        <li><a target="_blank" href="mailto:julietans122@hotmail.com">julietans122@hotmail.com</a></li>
+                        <li><a target="_blank" href="https://julietans122.wixsite.com/mysite">https://julietans122.wixsite.com/mysite</a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/julys122/?hl=en">julys122</a></li>
+                        <li>(+65) 8332 7559</li>
+                        <li>(+54) 911 2700 3588</li>
+                        <li>Block 3 Bedok South Avenue 1, #03-839 Singapore 460003</li>
+                        <li>Entre Rios 27, San Justo, Villa Luzuriaga, Buenos Aires, Argentina</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="blank"></div>
+<!--========================================
+Education
+=========================================-->
+            <div class="details-grid">
+                <div class="col-title">Education</div>
+                <div class="col-desc">
+                    <div>
+                        <h2>IAG, Argentina Institute of Gastronomy</h2>
+                        <span>Argentina, Buenos Aires.</span>
+                        <span><a target="_blank" href="http://www.iag.com.ar">http://www.iag.com.ar</a></span>
+                    </div>
+                </div>
+                <div class="col-desc">
+                    <div>
+                        <h2>CECARP, Culinary Institute of Gastronomy</h2>
+                        <span>Argentina, Buenos Aires.</span>
+                        <span><a target="_blank" href="http://www.cecarp.com.ar">http://www.cecarp.com.ar</a></span>
+                    </div>
+                </div>
+                <div class="col-desc">
+                    <div>
+                        <h2>UBA, University of Buenos Aires.</h2>
+                        <span>Argentina, Buenos Aires.</span>
+                        <span><a target="_blank" href="http://www.uba.ar/">http://www.uba.ar/</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="blank"></div>
+<!--========================================
+Certifications
+=========================================-->
+            <div class="details-grid">
+                <div class="col-title">Certifications</div>
+                <div class="col-desc">
+                    <div>
+                        <h3>SUTD Social Media Marketing (Graduate Cert.)</h3>
+                    <br/>
+                        <h3>Professional Gastronomy (Diploma)</h3>
+                    <br/>
+                        <h3>WSQ Food Hygiene Course (Certificate)</h3>
+                    <br/>
+                        <h3>Courses</h3>
+                        <span>Lunch and reception for events Pastry for events</span>
+                        <span>Organization of events Wedding Planner</span>
+                    <br/>
+                        <h3>Seminars</h3>
+                        <span>Chinese pastry</span>
+                        <span>Korean food</span>
+                        <span>Restaurant menu and their wines Mini Gateaux Vietnamese food</span>
+                        <span>Bread for sandwiches</span>
+                        <span>Petit fours</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blank"></div>
+<!--========================================
+Skills
+=========================================-->
+            <div class="details-grid">
+                <div class="col-title">Skills</div>
+                <div class="col-desc">
+                    <div>
+                        <span>Food preparation</span>
+                        <span>Food rotation</span>
+                        <span>Health & safety</span>
+                        <span>Food handling</span>
+                        <span>Kitchen operational procedures Nutrition</span>
+                        <span>Oenology</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blank"></div>
+<!--========================================
+Languages
+=========================================-->
+            <!-- <div class="details-grid">
+                <div class="col-title">Languages</div>
+                <div class="col-desc">
+                    <div>
+                        <span>English</span>
+                        <span>Mandrin & Dialects</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blank"></div> -->
+            <div class="blank"></div>
+<!--========================================
+Salary Package
+=========================================-->
+            <div class="details-grid">
+                <div class="col-title">Salary package</div>
+                <div class="col-desc">
+                    <div>
+                        <h3>Previous Pay package</h3>
+                        <span>$2,400</span>
+                        <h3>Expected Pay package</h3>
+                        <span>$2,500 - $2,800 (Negotiable)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blank"></div>
+<!--========================================
+End
+=========================================-->
+        </div>
+    </div>
+</section>
+<!--========================================
+Script
+=========================================-->
+<script type="text/javascript">
+    var ro = document.querySelectorAll("#read");
+    for (var i = 0, max = ro.length; i < max; i++) {
+    ro[i].addEventListener("keyup",function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            this.readOnly = true;
+        }
+    })};
+</script>
+</body>
