@@ -115,7 +115,7 @@ Script
 			});
 		});
 		
-		document.querySelectorAll("#content div #wb").forEach(function(a){
+		document.getElementById("wb").forEach(function(a){
 			a.addEventListener("click", function(){
 				var page = this.getAttribute("href").substring(1);
 				var url = "./pages/" + page + ".html";
