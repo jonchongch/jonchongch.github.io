@@ -42,6 +42,24 @@
 			});
 		});
 
+		document.querySelectorAll("#content a#wb").forEach(function(a){
+			a.addEventListener("click", function(){
+				var page = this.getAttribute("href").substring(1);
+				var url = "./pages/" + page + ".html";
+				var loadCon = document.getElementById("content");
+				var xhttp = new XMLHttpRequest();
+
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+					loadCon.innerHTML = this.responseText;
+					}
+				};
+
+				xhttp.open("GET", url, true);
+				xhttp.send();
+			});
+		});
+
 		// function getSrc(_src){
 		// 	var locateSrc = _src.lastIndexOf("-");
 		// 	var reSrc = _src.substring( 0 ,locateSrc);
