@@ -1,116 +1,141 @@
-body {
-margin: 0;
-padding: 0;
-border: 0;
-}
-body {
-font-family: 'Open Sans', sans-serif;
-font-size: 12pt;
-}
 * {
-margin: 0;
-padding: 0;
-border: 0;
-line-height: 1em;
-list-style: none;
-text-decoration: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #121e1f;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
-section{
-display: block;
-margin: 0 10px;
-padding: 0;
-}
-.active{
-display:block!important;
-}
-/*///////////////////////////////////////////
-Layout : Index
+body {
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
 
-grid-template:
-rows (height) / cols (width)
-
-grid-area:
-row start / col start / row end / col end 
-
-///////////////////////////////////////////*/
-div.index_lo {
-display: grid;
-grid-template: 100vh / 15% 85%;
-grid-gap: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8vh;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.2em;
 }
-div.index_lo > div.nav{
-grid-area: 1 / 1 / 1 / 1;
-position: fixed;
-width: 15%;
-background-color: #ffffff;
-border-right: 1px solid #8e8e8e80;
-border-bottom: none;
-box-shadow: 0px 0px 15px 1px #00000075;
-z-index: 99999;
+a,div,p,span,ul {
+    display: block;
+    padding: 0;
+    margin: 0;
 }
-div.index_lo > div#content{
-grid-area: 1 / 2 / 1 / 2;
-position: relative;
-width: 100%;
+a {
+    list-style: none;
+    text-decoration: none;
+    color: #121e1f;
 }
-/*///////////////////////////////////////////
-Layout : Nav
-///////////////////////////////////////////*/
-div.nav_lo{
-display: grid;
-grid-template: 80vh 20vh / 100%;
-grid-gap: 0;
+/* ===============
+Container
+=============== */
+div.main {
+    display: grid;
+    grid-template: 10vh auto / 100%;
 }
-div.nav_lo > ul.links {
-grid-area: 1 / 1 / 1 / 1;
-position: relative;
-width: 100%;
+/* ===============
+Nav
+=============== */
+div.main > div.nav {
+    position: fixed;
+    grid-area: 1/ 1/ 1/ 1;
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    z-index: 99999;
 }
-div.nav_lo > ul.social {
-grid-area: 2/ 1 / 2 / 1;
-position: absolute;
-width: 100%;
-bottom: 10px;
+div.main > div#content {
+    position: relative;
+    grid-area: 2/ 1/ 2/ 1;
+    width: 100%;
+    z-index: -99999;
 }
-/*///////////////////////////////////////////
-Nav Style
-///////////////////////////////////////////*/
-div.nav > nav{
-display: block;
-position: relative;
-width: 100%;
-height: 100vh;
+div.main > div#content > * {
+    padding: 0 1vh;
+    padding-top: 1vh;
 }
-nav > div > ul {
-display: block;
-/* background-color: #fff; */
-margin: 0;
-padding: 0;
+/* ===============
+Nav Links
+=============== */
+div.nav_container {
+    height: 10vh;
 }
-nav > div > ul > li{
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-justify-content: center;
-width: 100%;
-margin: 0;
-padding: 0;
+div.nav_container > ul.nav_link {
+    position: absolute;
+    bottom: 0;
 }
-nav > div > ul > li > a {
-display: block;
-position: relative;
-margin: 0;
-padding:10px 10px 0 10px;
-width: 100%;
-color: #404040;
-font-weight: 300;
+div.nav_container > ul.nav_link > li {
+    display: inline-block;
+    margin: 0;
+    margin-left: 1.8vh;
+    vertical-align: bottom;
 }
-nav > div > ul > li > a > span{
-text-transform: uppercase;
+div.nav_container > ul.nav_link > li:not(:first-child) > a:hover {
+    list-style: none;
+    text-decoration: none;
+    color: #121e1f;
+    opacity: 0.6;
 }
-.social > li > a {
-font-size: 14pt;
+div.nav_container > ul.nav_link > li a#logo {
+    font-size: 9vh;
 }
-/*///////////////////////////////////////////
-
-///////////////////////////////////////////*/
+/* ===============
+Footer
+=============== */
+div.footer {
+    display: block;
+    position: fixed;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1920px;
+    bottom: 1.2vh;
+}
+/* ===============
+Quick Contact
+=============== */
+div.contact {
+    position: absolute;
+    bottom: 0;
+    left: 1.8vh;
+}
+div.contact > ul.social > li {
+    margin: 0;
+    text-align: center;
+}
+div.contact > ul.social > li:first-child {
+    margin: 0;
+    margin-bottom: 0.6vh;
+    text-align: center;
+}
+div.contact > ul.social > li > a {
+    font-size: 2.4vh;
+}
+/* ===============
+Back to Top
+=============== */
+div.btt {
+    display: table;
+    position: absolute;
+    text-align: center;
+    border: 0.12vh solid #000;
+    border-radius: 0.6vh;
+    bottom: 0;
+    right: 1.8vh;
+}
+div.btt > a.anchor_top {
+    display: table-cell;
+    width: 4.5vh;
+    height: 4.5vh;
+    vertical-align: middle;
+}
+div.btt > a.anchor_top > i {
+    font-size: 2.4vh;
+}
