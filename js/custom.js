@@ -54,20 +54,20 @@ document.querySelectorAll(".nav_container ul li a#pg").forEach(function(a){
 // 	document.getElementById("loadBox").classList.remove("cf");
 // };
 
-let inPanelView = function(elem){
-	let distance = elem.getBoundingClientRect();
-	return (
-		distance.top >= 0 &&
-		distance.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-	);
-};
-let panel = document.querySelectorAll(".panel");
-window.addEventListener("scroll", function(event){
-	panel.forEach(element => {
-		if (inPanelView(element)) {
-			element.classList.add("panel-animation");
-		} else {
-			element.classList.remove("panel-animation");
-		}
-	});
-}, false);
+// let inPanelView = function(elem){
+// 	let distance = elem.getBoundingClientRect();
+// 	return (
+// 		distance.top >= 0 &&
+// 		distance.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+// 	);
+// };
+// let panel = document.querySelectorAll(".panel");
+// window.addEventListener("scroll", function(event){
+// 	panel.forEach(element => {
+// 		if (inPanelView(element)) {
+// 			element.classList.add("panel-animation");
+// 		} else {
+// 			element.classList.remove("panel-animation");
+// 		}
+// 	});
+// }, false);
