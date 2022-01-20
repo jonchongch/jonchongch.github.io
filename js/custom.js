@@ -63,7 +63,7 @@ let inPanelView = function(elem){
 };
 let content = document.getElementById("content");
 let panel = document.querySelectorAll(".panel");
-content.on('scroll', panel, function(){
+content.addEventListener('scroll', panel, function(){
 	panel.forEach(element => {
 		if (inPanelView(element)) {
 			element.classList.add("panel-animation");
