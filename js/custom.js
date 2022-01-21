@@ -54,21 +54,33 @@ document.querySelectorAll(".nav_container ul li a#pg").forEach(function(a){
 // 	document.getElementById("loadBox").classList.remove("cf");
 // };
 
-let inPanelView = function(elem){
+const inPanelView = function (elem) {
 	let distance = elem.getBoundingClientRect();
+	console.log(distance);
 	return (
-		distance.top >= 0 &&
+		distance.top <= 0 &&
 		distance.bottom <= (window.innerHeight || document.documentElement.clientHeight)
 	);
 };
+
 let content = document.getElementById("content");
-let panel = document.querySelectorAll(".panel");
-content.addEventListener('scroll', panel, function(){
+let panel = content.querySelectorAll("div.panel");
+
+// console.log(content);
+// console.log(panel);
+
+document.addEventListener("scroll", () => {
+
+	// let lastKnownScrollPosition = window.scrollY;
+	// console.log(lastKnownScrollPosition)
+	// console.log('scrolling')
+	
 	panel.forEach(element => {
 		if (inPanelView(element)) {
+			// console.log('!!');
 			element.classList.add("panel-animation");
 		} else {
 			element.classList.remove("panel-animation");
 		}
 	});
-}, false);
+}, false)
