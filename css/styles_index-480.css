@@ -40,6 +40,7 @@ Container
 div.main {
     display: grid;
     /* grid-template: 10vh auto / 100%; */
+    grid-template: auto / 100%;
 }
 /* ===============
 Nav
