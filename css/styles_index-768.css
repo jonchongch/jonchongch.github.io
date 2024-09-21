@@ -38,7 +38,7 @@ Container
 =============== */
 div.main {
     display: grid;
-    grid-template: 10vh auto / 100%;
+    /* grid-template: 10vh auto / 100%; */
 }
 /* ===============
 Nav
@@ -104,7 +104,8 @@ Quick Contact
 div.contact {
     position: absolute;
     bottom: 0;
-    left: 1.8vh;
+    /* left: 1.8vh; */
+    left: -5%;
 }
 div.contact > ul.social > li {
     margin: 0;
