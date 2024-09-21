@@ -21,7 +21,8 @@ xhttp.onreadystatechange = function() {
 	this.responseText;
 	}
 };
-xhttp.open("GET", "./pages/workbench.html", true);
+// xhttp.open("GET", "./pages/workbench.html", true);
+xhttp.open("GET", "./pages/cv-jon.html", true);
 xhttp.send();
 
 document.querySelectorAll(".nav_container ul li a#pg").forEach(function(a){
