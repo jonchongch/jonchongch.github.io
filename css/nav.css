@@ -28,7 +28,7 @@ width: 100%;
 padding: 5px 5%;
 text-align: right;
 }
-.navbar-brand > i {
+.navbar-brand > i.logo {
    /* use !important to prevent issues with browser extensions that change fonts */
    font-family: 'jn';
    display: block;
@@ -40,12 +40,9 @@ text-align: right;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
 }
-.navbar-brand > i.logo {
-   font-size: 2em;
- }
 .navbar-brand > i.logo:before {
-   font-family: 'jn';
    content: "\e900";
+   font-size: 2em;
 }
 .navbar-nav {
    width: 100%;
