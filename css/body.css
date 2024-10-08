@@ -1,0 +1,69 @@
+@font-face {
+   font-family: 'Lato';
+   src: url('../font/Lato-Light.ttf') format('truetype');
+   font-weight: 100;
+   font-style: normal;
+   font-size: 10pt;
+}
+@font-face {
+   font-family: 'Lato';
+   src: url('../font/Lato-Thin.ttf') format('truetype');
+   font-weight: 300;
+   font-style: normal;
+   font-size: 10pt;
+}
+@font-face {
+   font-family: 'Lato';
+   src: url('../font/Lato-Regular.ttf') format('truetype');
+   font-weight: 500;
+   font-style: normal;
+   font-size: 10pt;
+}
+@font-face {
+   font-family: 'Lato';
+   src: url('../font/Lato-Bold.ttf') format('truetype');
+   font-weight: 700;
+   font-style: normal;
+   font-size: 10pt;
+}
+@font-face {
+   font-family: 'Lato';
+   src: url('../font/Lato-Black.ttf') format('truetype');
+   font-weight: 900;
+   font-style: normal;
+   font-size: 10pt;
+}
+body {
+   display: block;
+   position: relative;
+   width: 100%;
+   height: 100vh;
+}
+body > * {
+   display: block;
+   position: relative;
+   margin: 0;
+   padding: 0;
+   border: none;
+   font-family: 'Lato', sans-serif;
+}
+div.container {
+   display: block;
+   position: relative;
+   width: 100%;
+   max-width: 100%;
+   height: 100vh;
+   max-height: 100vh;
+   padding: 2.5% 10%;
+}
+@media screen and (max-width : 430px) {
+   div.container {
+      display: block;
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      height: 100vh;
+      max-height: 100vh;
+      padding: 50% 0 110%;
+   }  
+}

@@ -1,0 +1,33 @@
+
+/* Set the frame container */
+.main-content {
+   position: relative;
+    width: 100%; /* Fixed width */
+    height: 100%; /* Fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    position: relative; /* Positioning for a fixed frame */
+    scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    z-index: 0;
+    box-shadow: inset 0 0 7px rgba(50,50,50,0.25);
+}
+
+/* Hide scrollbar in Webkit (Chrome, Safari) */
+.main-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* Image wrapper for flexbox display */
+.image-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+}
+
+/* Styling for the images */
+.image-wrapper img {
+    width: 100%; /* Image takes full width of the frame */
+    height: auto; /* Same as the frame height to fill it */
+    object-fit: cover; /* Cover the entire container */
+    scroll-snap-align: start; /* Snap image to the start */
+}
