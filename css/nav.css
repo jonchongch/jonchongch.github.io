@@ -12,11 +12,11 @@
 }
 @font-face {
    font-family: 'jn';
-   src:  url('https://jonchongch.github.io/fonts/jn.eot');
-   src:  url('https://jonchongch.github.io/fonts/jn.eot') format('embedded-opentype'),
-   url('https://jonchongch.github.io/fonts/jn.ttf') format('truetype'),
-   url('https://jonchongch.github.io/fonts/jn.woff') format('woff'),
-   url('https://jonchongch.github.io/fonts/jn.svg') format('svg');
+   src:  url('https://jonchongch.github.io/font/jn.eot');
+   src:  url('https://jonchongch.github.io/font/jn.eot') format('embedded-opentype'),
+   url('https://jonchongch.github.io/font/jn.ttf') format('truetype'),
+   url('https://jonchongch.github.io/font/jn.woff') format('woff'),
+   url('https://jonchongch.github.io/font/jn.svg') format('svg');
    font-weight: normal;
    font-style: normal;
    font-display: block;
