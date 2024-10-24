@@ -3,7 +3,7 @@
 .main-content {
     position: relative; /* Positioning for a fixed frame */
     width: 100%; /* Fixed width */
-    height: 100vh; /* Fixed height */
+    height: 100%; /* Fixed height */
     margin: 0;
     padding: 0;
     overflow-y: auto; /* Enable vertical scrolling */
