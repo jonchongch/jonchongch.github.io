@@ -3,7 +3,7 @@
 .main-content {
     position: relative; /* Positioning for a fixed frame */
     width: 100%; /* Fixed width */
-    height: 100%; /* Fixed height */
+    height: 100vh; /* Fixed height */
     margin: 0;
     padding: 0;
     overflow-y: auto; /* Enable vertical scrolling */
@@ -33,5 +33,10 @@
     scroll-snap-align: start; /* Snap image to the start */
 }
 @media screen and (max-width : 440px) {
-
+    .main-content {
+        margin: 5vh 0;
+    }
+    .image-wrapper {
+        margin: 5vh 0;
+    }
 }
