@@ -1,12 +1,13 @@
 
 /* Set the frame container */
 .main-content {
-   position: relative;
+    position: relative; /* Positioning for a fixed frame */
     width: 100%; /* Fixed width */
     height: 100%; /* Fixed height */
+    margin: 0;
+    padding: 0;
     overflow-y: auto; /* Enable vertical scrolling */
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    position: relative; /* Positioning for a fixed frame */
     scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
     scrollbar-width: none; /* Hide scrollbar in Firefox */
     z-index: 0;
@@ -30,4 +31,12 @@
     height: auto; /* Same as the frame height to fill it */
     object-fit: cover; /* Cover the entire container */
     scroll-snap-align: start; /* Snap image to the start */
+}
+@media screen and (max-width : 440px) {
+    .main-content {
+        margin: 5% 0;
+    }
+    .image-wrapper {
+        margin: 5% 0;
+    }
 }
