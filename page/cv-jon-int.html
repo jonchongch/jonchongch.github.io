@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+<!---------------------------------------------------------------------------------------------------------
+Bootstrap CSS
+---------------------------------------------------------------------------------------------------------->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+
+<!---------------------------------------------------------------------------------------------------------
+Custom CSS
+---------------------------------------------------------------------------------------------------------->
+<style>
+    body {
+        margin: 0 auto;
+        padding: 15px;
+        width: 794px;
+        height: 1123px;
+        border: 1px solid #222222;
+        text-align: left;
+        font-family: sans-serif;
+        font-size: 10pt;
+    }
+    .block {
+        width: 40%;
+        margin: 2% 0;
+        border-top: 5px solid #000;
+    }
+    span[class^="exp-"], span[class^="edu-"] {
+        display: block!important;
+    }
+    span.exp-title, span.edu-school {
+        font-weight: bold!important;
+    }
+    :is(h1,h2,h3,h4,h5,h6) {
+        font-weight: bold;
+    }
+
+    .info, .edu, .skill, .lang {
+        padding: 1em 0;
+    }
+    /* info */
+    table > tbody > .info-details > th, table > tbody > .info-details > td {
+        font-weight: normal;
+        padding: 2px 0 3px;
+    }
+    table > tbody > .info-details > th::after {
+        content: ":";
+        padding: 0 0.75em;
+        float: inline-end;
+    }
+    table > tbody > .info-details > td > a {
+        color: #000;
+        text-decoration: none;
+    }
+    table > tbody > .info-details > td > a:hover {
+        opacity: 0.5;
+        text-decoration: none;
+        transition-delay: ease-in-out 0.3s;
+    }
+    /* language */
+    table > tbody > .lang-details > th, table > tbody > .lang-details > td {
+        font-weight: normal;
+        padding: 2px 0 3px;
+    }
+    table > tbody > .lang-details > th::after {
+        content: ":";
+        padding: 0 0.75em;
+        float: inline-end;
+    }
+    /* -------------------------------------------------------------------------
+    Print
+    ------------------------------------------------------------------------- */
+    @media print {
+    body {
+        border: none;
+    }
+    div.footer {
+        display: none;
+    }
+    }
+</style>
+</head>
+<body>
+<!---------------------------------------------------------------------------------------------------------
+Main Content
+---------------------------------------------------------------------------------------------------------->
+
+<div class="container-fluid">
+   <div class="row">
+
+<!--========================================
+Work History
+=========================================-->
+        <div class="col-5">
+            <h5>Work History</h5>
+            <div class="block"></div>
+            <div class="list-group my-3">
+
+                <div class="list-group-item border-0 p-0 my-2">
+                    <p class="exp-details">
+                        <span class="exp-title">Phoon Huat Pte Ltd</span>
+                        <span class="exp-role">Web Master & Graphic Designer</span>
+                        <span class="exp-duration">2022 Jul - 2024 Mar</span>
+                        <span class="exp-task"></span>
+                    </p>
+                </div>
+                <div class="list-group-item border-0 p-0 my-2">
+                    <p class="exp-details">
+                        <span class="exp-title">Spa Esprit Group Pte Ltd</span>
+                        <span class="exp-role">eCommerce Executive</span>
+                        <span class="exp-duration">2021 Jul - 2022 Jun</span>
+                        <span class="exp-task"></span>
+                    </p>
+                </div>
+                <div class="list-group-item border-0 p-0 my-2">
+                    <p class="exp-details">
+                        <span class="exp-title">-</span>
+                        <span class="exp-role">Web & Graphic Freelance Designer</span>
+                        <span class="exp-duration">2019 Mar - 2021 Jun</span>
+                        <span class="exp-task"></span>
+                    </p>
+                </div>
+                <div class="list-group-item border-0 p-0 my-2">
+                    <p class="exp-details">
+                        <span class="exp-title">COURTS Singapore Pte Ltd</span>
+                        <span class="exp-role">Web Content Executive</span>
+                        <span class="exp-duration">2016 Feb - 2019 Mar</span>
+                        <span class="exp-task"></span>
+                    </p>
+                </div>
+                <div class="list-group-item border-0 p-0 my-2">
+                    <p class="exp-details">
+                        <span class="exp-title">Freelance Creative Projects</span>
+                        <span class="exp-role">Freelance Digital Designer</span>
+                        <span class="exp-duration">2013 Apr - 2016 Feb</span>
+                        <span class="exp-task"><strong>Projects with :</strong><br />CreativeMbassy | inter-art.org | Ippudo Singapore | D'Zera | Neuganics</span>
+                    </p>
+                </div>
+                <div class="list-group-item border-0 p-0 my-2">
+                    <p class="exp-details">
+                        <span class="exp-title">MHA (Ministry of Home Affairs)</span>
+                        <span class="exp-role">Junior Prison Officer(Corporal)</span>
+                        <span class="exp-duration">2008 Sept - 2012 May</span>
+                        <span class="exp-task"></span>
+                    </p>
+                </div>
+                <div class="list-group-item border-0 p-0 my-2">
+                    <p class="exp-details">
+                        <span class="exp-title">Red Print Media Pte Ltd</span>
+                        <span class="exp-role">Junior Graphic Designer</span>
+                        <span class="exp-duration">2008 Aug - 2008 Sept</span>
+                        <span class="exp-task"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-7">
+
+<!--========================================
+Testimony
+=========================================-->
+            <h1>Jonathan Chong</h1>
+            <p>I possess and have accumulated years of professional experience in the field of web and graphics. Throughout my career, my focus has been on delivering high-quality designs and user-friendly websites. Additionally, I understand the importance of balancing creativity with business objectives to achieve desired outcomes. The dedication to my work enables me to provide for my family. I am confident that my skills and experience will be a valuable asset to any organization.</p>
+            
+<!--========================================
+Personal Information
+=========================================-->
+            <div class="info">
+                <h5>Personal Information</h5>
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr class="info-details">
+                            <th class="col-4">Email</th>
+                            <td class="col-8">
+                                <a target="_blank" href="mailto:jon.chong.ch@gmail.com">jon.chong.ch@gmail.com</a>
+                            </td>
+                        </tr>
+                        <tr class="info-details">
+                            <th scope="row" class="col-4">Portfolio</th>
+                            <td class="col-8">
+                                <a target="_blank" href="https://jonchongch.github.io/">https://jonchongch.github.io/</a>
+                            </td>
+                        </tr>
+                        <tr class="info-details">
+                            <th scope="row" class="col-4">Mobile</th>
+                            <td class="col-8">
+                                <a href="tel:+6582334751">(+65) 8233 4751</a>
+                                <br>
+                                <a href="tel:+54911 27003588">(+54) 911 2700 3588</a>
+                            </td>
+                        </tr>
+                        <tr class="info-details">
+                            <th scope="row" class="col-4">Address (SG)</th>
+                            <td class="col-8">
+                                401A Northshore Drive, #15-26
+                                <br>
+                                Singapore 821401
+                            </td>
+                        </tr>
+                        <tr class="info-details">
+                            <th scope="row" class="col-4">Address (ARG)</th>
+                            <td class="col-8">
+                                Entre Rios 27, San Justo, Villa Luzuriaga, 
+                                <br>
+                                Buenos Aires, Argentina
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+<!--========================================
+Education
+=========================================-->
+            <div class="edu">
+                <h5>Education</h5>
+                <div class="list-group">
+
+                    <div class="list-group-item border-0 p-0">
+                        <p class="edu-details">
+                            <span class="edu-school">Lasalle College of the Arts</span>
+                            <span class="edu-cert">Diploma in Design communications</span>
+                            <span class="edu-duration">2012 Aug - 2015 May</span>
+                        </p>
+                    </div>
+
+                    <div class="list-group-item border-0 p-0">
+                        <p class="edu-details">
+                            <span class="edu-school">Central College East (Bedok)</span>
+                            <span class="edu-cert">NITEC Certification in Digital Media Design</span>
+                            <span class="edu-duration">2004 Jan - 2005 Nov</span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+<!--========================================
+Skills
+=========================================-->
+            <div class="skill">
+                <h5>Capabilities</h5>
+                <span class="px-3 py-2 my-1 badge badge-pill badge-primary">
+                    Adobe Creative Cloud
+                </span>
+                <span class="px-3 py-2 my-1 badge badge-pill badge-primary">
+                    HTML / CSS / Vanilla JS
+                </span>
+                <span class="px-3 py-2 my-1 badge badge-pill badge-primary">
+                    Photography
+                </span>
+                <span class="px-3 py-2 my-1 badge badge-pill badge-primary">
+                    SEO Tools
+                </span>
+                <span class="px-3 py-2 my-1 badge badge-pill badge-primary">
+                    Saleforce
+                </span>
+                <span class="px-3 py-2 my-1 badge badge-pill badge-primary">
+                    Wordpress
+                </span>
+                <span class="px-3 py-2 my-1 badge badge-pill badge-primary">
+                    Shopify
+                </span>
+                <span class="px-3 py-2 my-1 badge badge-pill badge-primary">
+                    e-Commerce platforms
+                </span>
+                <span class="px-3 py-2 my-1 badge badge-pill badge-primary">
+                    Magento 2
+                </span>
+            </div>
+<!--========================================
+Language
+=========================================-->
+            <div class="lang">
+                <h5>Languages</h5>
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr class="lang-details">
+                            <th scope="row" class="col-4">English</th>
+                            <td class="col-8">
+                                Native Language
+                            </td>
+                        </tr>
+                        <tr class="lang-details">
+                            <th scope="row" class="col-4">Mandrin & Dialect</th>
+                            <td class="col-8">
+                                Conversational Second Language
+                            </td>
+                        </tr>
+                        <tr class="lang-details">
+                            <th scope="row" class="col-4">Spanish</th>
+                            <td class="col-8">
+                                Basic Conversational Foreign Language
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+<!--========================================
+End
+=========================================-->
+        </div>
+
+   </div>
+</div>
+
+<!---------------------------------------------------------------------------------------------------------
+Bootstrap JS
+---------------------------------------------------------------------------------------------------------->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+</body>
+</html>

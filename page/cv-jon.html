@@ -3,322 +3,305 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-<!---------------------------------------------------------------------------------------------------------
-Bootstrap CSS
----------------------------------------------------------------------------------------------------------->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
-
-<!---------------------------------------------------------------------------------------------------------
-Custom CSS
----------------------------------------------------------------------------------------------------------->
-<style>
-    body {
-        margin: 0 auto;
-        padding: 15px;
-        width: 794px;
-        height: 1123px;
-        border: 1px solid #222222;
-        text-align: left;
-        font-family: sans-serif;
-        font-size: 10pt;
-    }
-    .block {
-        width: 40%;
-        margin: 2% 0;
-        border-top: 5px solid #000;
-    }
-    span[class^="exp-"], span[class^="edu-"] {
-        display: block!important;
-    }
-    span.exp-title, span.edu-school {
-        font-weight: bold!important;
-    }
-    :is(h1,h2,h3,h4,h5,h6) {
-        font-weight: bold;
-    }
-
-    .info, .edu, .skill, .lang {
-        padding: 1em 0;
-    }
-    /* info */
-    table > tbody > .info-details > th, table > tbody > .info-details > td {
-        font-weight: normal;
-        padding: 2px 0 3px;
-    }
-    table > tbody > .info-details > th::after {
-        content: ":";
-        padding: 0 0.75em;
-        float: inline-end;
-    }
-    table > tbody > .info-details > td > a {
-        color: #000;
-        text-decoration: none;
-    }
-    table > tbody > .info-details > td > a:hover {
-        opacity: 0.5;
-        text-decoration: none;
-        transition-delay: ease-in-out 0.3s;
-    }
-    /* language */
-    table > tbody > .lang-details > th, table > tbody > .lang-details > td {
-        font-weight: normal;
-        padding: 2px 0 3px;
-    }
-    table > tbody > .lang-details > th::after {
-        content: ":";
-        padding: 0 0.75em;
-        float: inline-end;
-    }
-    /* -------------------------------------------------------------------------
-    Print
-    ------------------------------------------------------------------------- */
-    @media print {
-    body {
-        border: none;
-    }
-    div.footer {
-        display: none;
-    }
-    }
-</style>
+   <title>Jonathan Chong CV</title>
 </head>
+
+<!-- Bootstrap CSS - Verify the path -->
+<link rel="stylesheet" href="../bs-css/bootstrap.min.css">
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/ad42bd9076.js" crossorigin="anonymous"></script>
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="../css/cv.css">
+
 <body>
-<!---------------------------------------------------------------------------------------------------------
-Main Content
----------------------------------------------------------------------------------------------------------->
+<div class="container">
+<!-- Personal Details -->
+   <div class="row section">
+      <div class="col-10 offset-2">
+         <h1>Jonathan Chong</h1>
+      </div>
+      <div class="col-10 offset-2">
 
-<div class="container-fluid">
-   <div class="row">
-
-<!--========================================
-Work History
-=========================================-->
-        <div class="col-5">
-            <h5>Work History</h5>
-            <div class="block"></div>
-            <div class="list-group my-3">
-
-                <div class="list-group-item border-0 p-0 my-2">
-                    <p class="exp-details">
-                        <span class="exp-title">Phoon Huat Pte Ltd</span>
-                        <span class="exp-role">Web Master & Graphic Designer</span>
-                        <span class="exp-duration">2022 Jul - 2024 Mar</span>
-                        <span class="exp-task"></span>
-                    </p>
-                </div>
-                <div class="list-group-item border-0 p-0 my-2">
-                    <p class="exp-details">
-                        <span class="exp-title">Spa Esprit Group Pte Ltd</span>
-                        <span class="exp-role">eCommerce Executive</span>
-                        <span class="exp-duration">2021 Jul - 2022 Jun</span>
-                        <span class="exp-task"></span>
-                    </p>
-                </div>
-                <div class="list-group-item border-0 p-0 my-2">
-                    <p class="exp-details">
-                        <span class="exp-title">-</span>
-                        <span class="exp-role">Web & Graphic Freelance Designer</span>
-                        <span class="exp-duration">2019 Mar - 2021 Jun</span>
-                        <span class="exp-task"></span>
-                    </p>
-                </div>
-                <div class="list-group-item border-0 p-0 my-2">
-                    <p class="exp-details">
-                        <span class="exp-title">COURTS Singapore Pte Ltd</span>
-                        <span class="exp-role">Web Content Executive</span>
-                        <span class="exp-duration">2016 Feb - 2019 Mar</span>
-                        <span class="exp-task"></span>
-                    </p>
-                </div>
-                <div class="list-group-item border-0 p-0 my-2">
-                    <p class="exp-details">
-                        <span class="exp-title">Freelance Creative Projects</span>
-                        <span class="exp-role">Freelance Digital Designer</span>
-                        <span class="exp-duration">2013 Apr - 2016 Feb</span>
-                        <span class="exp-task"><strong>Projects with :</strong><br />CreativeMbassy | inter-art.org | Ippudo Singapore | D'Zera | Neuganics</span>
-                    </p>
-                </div>
-                <div class="list-group-item border-0 p-0 my-2">
-                    <p class="exp-details">
-                        <span class="exp-title">MHA (Ministry of Home Affairs)</span>
-                        <span class="exp-role">Junior Prison Officer(Corporal)</span>
-                        <span class="exp-duration">2008 Sept - 2012 May</span>
-                        <span class="exp-task"></span>
-                    </p>
-                </div>
-                <div class="list-group-item border-0 p-0 my-2">
-                    <p class="exp-details">
-                        <span class="exp-title">Red Print Media Pte Ltd</span>
-                        <span class="exp-role">Junior Graphic Designer</span>
-                        <span class="exp-duration">2008 Aug - 2008 Sept</span>
-                        <span class="exp-task"></span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-7">
-
-<!--========================================
-Testimony
-=========================================-->
-            <h1>Jonathan Chong</h1>
-            <p>I possess and have accumulated years of professional experience in the field of web and graphics. Throughout my career, my focus has been on delivering high-quality designs and user-friendly websites. Additionally, I understand the importance of balancing creativity with business objectives to achieve desired outcomes. The dedication to my work enables me to provide for my family. I am confident that my skills and experience will be a valuable asset to any organization.</p>
-            
-<!--========================================
-Personal Information
-=========================================-->
-            <div class="info">
-                <h5>Personal Information</h5>
-                <table class="table table-borderless">
-                    <tbody>
-                        <tr class="info-details">
-                            <th class="col-4">Email</th>
-                            <td class="col-8">
-                                <a target="_blank" href="mailto:jon.chong.ch@gmail.com">jon.chong.ch@gmail.com</a>
-                            </td>
-                        </tr>
-                        <tr class="info-details">
-                            <th scope="row" class="col-4">Portfolio</th>
-                            <td class="col-8">
-                                <a target="_blank" href="https://jonchongch.github.io/">https://jonchongch.github.io/</a>
-                            </td>
-                        </tr>
-                        <tr class="info-details">
-                            <th scope="row" class="col-4">Mobile</th>
-                            <td class="col-8">
-                                <a href="tel:+6582334751">(+65) 8233 4751</a>
-                                <br>
-                                <a href="tel:+54911 27003588">(+54) 911 2700 3588</a>
-                            </td>
-                        </tr>
-                        <tr class="info-details">
-                            <th scope="row" class="col-4">Address (SG)</th>
-                            <td class="col-8">
-                                401A Northshore Drive, #15-26
-                                <br>
-                                Singapore 821401
-                            </td>
-                        </tr>
-                        <tr class="info-details">
-                            <th scope="row" class="col-4">Address (ARG)</th>
-                            <td class="col-8">
-                                Entre Rios 27, San Justo, Villa Luzuriaga, 
-                                <br>
-                                Buenos Aires, Argentina
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-<!--========================================
-Education
-=========================================-->
-            <div class="edu">
-                <h5>Education</h5>
-                <div class="list-group">
-
-                    <div class="list-group-item border-0 p-0">
-                        <p class="edu-details">
-                            <span class="edu-school">Lasalle College of the Arts</span>
-                            <span class="edu-cert">Diploma in Design communications</span>
-                            <span class="edu-duration">2012 Aug - 2015 May</span>
-                        </p>
-                    </div>
-
-                    <div class="list-group-item border-0 p-0">
-                        <p class="edu-details">
-                            <span class="edu-school">Central College East (Bedok)</span>
-                            <span class="edu-cert">NITEC Certification in Digital Media Design</span>
-                            <span class="edu-duration">2004 Jan - 2005 Nov</span>
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
-<!--========================================
-Skills
-=========================================-->
-            <div class="skill">
-                <h5>Capabilities</h5>
-                <span class="px-3 py-2 my-1 badge badge-pill badge-primary">
-                    Adobe Creative Cloud
-                </span>
-                <span class="px-3 py-2 my-1 badge badge-pill badge-primary">
-                    HTML / CSS / Vanilla JS
-                </span>
-                <span class="px-3 py-2 my-1 badge badge-pill badge-primary">
-                    Photography
-                </span>
-                <span class="px-3 py-2 my-1 badge badge-pill badge-primary">
-                    SEO Tools
-                </span>
-                <span class="px-3 py-2 my-1 badge badge-pill badge-primary">
-                    Saleforce
-                </span>
-                <span class="px-3 py-2 my-1 badge badge-pill badge-primary">
-                    Wordpress
-                </span>
-                <span class="px-3 py-2 my-1 badge badge-pill badge-primary">
-                    Shopify
-                </span>
-                <span class="px-3 py-2 my-1 badge badge-pill badge-primary">
-                    e-Commerce platforms
-                </span>
-                <span class="px-3 py-2 my-1 badge badge-pill badge-primary">
-                    Magento 2
-                </span>
-            </div>
-<!--========================================
-Language
-=========================================-->
-            <div class="lang">
-                <h5>Languages</h5>
-                <table class="table table-borderless">
-                    <tbody>
-                        <tr class="lang-details">
-                            <th scope="row" class="col-4">English</th>
-                            <td class="col-8">
-                                Native Language
-                            </td>
-                        </tr>
-                        <tr class="lang-details">
-                            <th scope="row" class="col-4">Mandrin & Dialect</th>
-                            <td class="col-8">
-                                Conversational Second Language
-                            </td>
-                        </tr>
-                        <tr class="lang-details">
-                            <th scope="row" class="col-4">Spanish</th>
-                            <td class="col-8">
-                                Basic Conversational Foreign Language
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div>
-
-<!--========================================
-End
-=========================================-->
-        </div>
-
+         <table class="table table-borderless">
+            <tbody>
+                <tr class="info-details">
+                    <th class="col-4">Email</th>
+                    <td class="col-8">
+                        <a target="_blank" href="mailto:jon.chong.ch@gmail.com">jon.chong.ch@gmail.com</a>
+                    </td>
+                </tr>
+                <tr class="info-details">
+                    <th scope="row" class="col-4">Portfolio</th>
+                    <td class="col-8">
+                        <a target="_blank" href="https://jonchongch.github.io/">https://jonchongch.github.io/</a>
+                    </td>
+                </tr>
+                <tr class="info-details">
+                    <th scope="row" class="col-4">Mobile</th>
+                    <td class="col-8">
+                        <a href="tel:+6582334751">(+65) 8233 4751</a>
+                    </td>
+                </tr>
+                <tr class="info-details">
+                    <th scope="row" class="col-4">Address (SG)</th>
+                    <td class="col-8">
+                        401A Northshore Drive
+                        <br>
+                        Singapore 821401
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
    </div>
+<!-- Professionl Summary -->
+   <div class="row section">
+      <hr class="col-1 border-5 border-black">
+      <div class="col-10 offset-2">
+         <h4>Professionl Summary</h4>
+         <p>Versatile Web and Graphic Designer with a strong foundation in Adobe Creative Suite and a passion for creating visually appealing and functional designs. Proficient in HTML, CSS, and experienced in e-commerce platforms like Shopify and Magento 2. Adept at balancing creative vision with technical requirements to achieve desired outcomes.
+         </p>
+         <p>With a focus on e-commerce and digital marketing, I have experience creating engaging online experiences that drive conversions and boost brand awareness. Skilled in crafting compelling visual content and optimizing website performance for maximum impact.
+         </p>
+      </div>
+   </div>
+<!-- Skills -->
+   <div class="row section">
+   <hr class="col-1 border-5 border-black">
+      <div class="col-10 offset-2">
+         <div class="skill">
+            <h4>Capabilities</h4>
+            <span class="px-3 py-2 my-1 badge rounded-pill text-bg-primary">
+               Adobe Creative Cloud
+            </span>
+            <span class="px-3 py-2 my-1 badge rounded-pill text-bg-primary">
+               HTML / CSS / Vanilla JS
+            </span>
+            <span class="px-3 py-2 my-1 badge rounded-pill text-bg-primary">
+               Photography
+            </span>
+            <span class="px-3 py-2 my-1 badge rounded-pill text-bg-primary">
+               SEO Tools
+            </span>
+            <span class="px-3 py-2 my-1 badge rounded-pill text-bg-primary">
+               Saleforce.com
+            </span>
+            <span class="px-3 py-2 my-1 badge rounded-pill text-bg-primary">
+               Wordpress
+            </span>
+            <span class="px-3 py-2 my-1 badge rounded-pill text-bg-primary">
+               Shopify
+            </span>
+            <span class="px-3 py-2 my-1 badge rounded-pill text-bg-primary">
+               e-Commerce platforms
+            </span>
+            <span class="px-3 py-2 my-1 badge rounded-pill text-bg-primary">
+               Magento 2
+            </span>
+         </div>
+      </div>
+   </div>
+<!-- Experiences -->
+   <div class="row section">
+      <hr class="col-1 border-5 border-black">
+      <div class="col-10 offset-2">
+         <h4>Work History</h4>
+         <div class="list-group my-3">
+
+               <div class="list-group-item border-0 p-0 my-2">
+                  <div class="exp-details">
+                     <p class="exp-company">Phoon Huat Pte Ltd</p>
+                     <p class="exp-duration">2022 Jul - 2024 Mar</p>
+                     <p class="exp-role">Web Master & Graphic Designer</p>
+                     <ul class="exp-task">
+                        <li>Maintained and updated the company website, ensuring seamless functionality, user-friendly navigation, and up-to-date product information.</li>
+                        <li>Designed web graphics, banners, and marketing materials to support e-commerce campaigns and branding.</li>
+                        <li>Managed website content, including product listings, promotional content, and seasonal updates.</li>
+                        <li>Collaborated with the marketing team to create visually appealing assets that aligned with branding and marketing goals.</li>
+                     </ul>
+                     <ul class="exp-achievement">
+                        <li>Improved website user experience by restructuring product categories and enhancing navigation, resulting in a 20% reduction in bounce rates.</li>
+                        <li>Created high-impact graphics and web banners that contributed to a 15% increase in conversion rates during promotional periods.</li>
+                        <li>Played a key role in maintaining website uptime and functionality, resolving technical issues promptly to minimize downtime.</li>
+                        <li>Enhanced website SEO performance by optimizing page load times and improving image assets, contributing to a 10% boost in organic traffic.</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="list-group-item border-0 p-0 my-2">
+                  <div class="exp-details">
+                     <p class="exp-company">Spa Esprit Group Pte Ltd</p>
+                     <p class="exp-duration">2021 Jul - 2022 Jun</p>
+                     <p class="exp-role">eCommerce Executive</p>
+                     <ul class="exp-task">
+                        <li>Oversaw online sales and e-commerce operations, focusing on enhancing the user experience and maximizing sales conversions.</li>
+                        <li>Managed the product catalog, updated pricing, and promotional details, and ensured accurate, engaging product descriptions.</li>
+                        <li>Analyzed web traffic and sales data to identify trends and optimize online store performance.</li>
+                        <li>Coordinated with various teams, including logistics and marketing, to ensure smooth execution of campaigns.</li>
+                     </ul>
+                     <ul class="exp-achievement">
+                        <li>Increased e-commerce revenue by 25% through effective product page optimizations and strategic promotions.</li>
+                        <li>Collaborated with the logistics and marketing teams to streamline the product update process, reducing time to market for new items by 30%.</li>
+                        <li>Conducted detailed web analytics reports, identifying customer behavior patterns that led to a targeted marketing strategy and 15% growth in user </li>engagement.
+                        <li>Successfully launched promotional campaigns that consistently met or exceeded sales targets, driving customer retention and repeat purchases.</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="list-group-item border-0 p-0 my-2">
+                  <div class="exp-details">
+                     <p class="exp-company">Freelance Creative Projects with :<br />JN Comidas | Argana Wine</p>
+                     <p class="exp-duration">2019 Mar - 2021 Jun</p>
+                     <p class="exp-role">Web & Graphic Freelance Designer</p>
+                     <ul class="exp-task">
+                        <li>Provided design services for clients such as JN Comidas and Argana Wine, creating branded graphics, web content, and digital materials.</li>
+                        <li>Worked on custom design projects, including logos, product labels, and social media graphics, to build unique brand identities.</li>
+                        <li>Conducted client consultations to understand project requirements and deliver tailored, high-quality designs.</li>
+                     </ul>
+                     <ul class="exp-achievement">
+                        <li>Developed unique brand visuals for JN Comidas and Argana Wine, boosting their brand recognition and attracting new clientele.</li>
+                        <li>Improved project workflow efficiency, reducing design turnaround time by 20% while maintaining high design quality.</li>
+                        <li>Established a reputation for creative and reliable service, securing ongoing freelance opportunities from referrals.</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="list-group-item border-0 p-0 my-2">
+                  <div class="exp-details">
+                     <p class="exp-company">COURTS Singapore Pte Ltd</p>
+                     <p class="exp-duration">2016 Feb - 2019 Mar</p>
+                     <p class="exp-role">Web Content Executive</p>
+                     <ul class="exp-task">
+                        <li>Created, edited, and managed content across the company's website to ensure alignment with branding and marketing objectives.</li>
+                        <li>Wrote and optimized product descriptions and promotional content for SEO, enhancing online visibility and user engagement.</li>
+                        <li>Collaborated with marketing and design teams to coordinate website updates, seasonal promotions, and campaigns.</li>
+                        <li>Analyzed content performance and provided insights to improve online engagement and conversion rates.</li>
+                     </ul>
+                     <ul class="exp-achievement">
+                        <li>Developed and implemented content strategies for seasonal promotions that consistently drove a 20% increase in online sales.</li>
+                        <li>Conducted content performance analysis that informed future campaigns, resulting in continuous improvement of user engagement metrics.</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="list-group-item border-0 p-0 my-2">
+                  <div class="exp-details">
+                     <p class="exp-company">Freelance Creative Projects with :<br />CreativeMbassy | inter-art.org | Ippudo Singapore | D'Zera | Neuganics</p>
+                     <p class="exp-duration">2013 Apr - 2016 Feb</p>
+                     <p class="exp-role">Freelance Digital Designer</p>
+                     <ul class="exp-task">
+                        <li>Provided design services for clients (CreativeMbassy, inter-art.org, Ippudo Singapore, D'Zera, Neuganics), creating branded graphics, web content, and digital materials.</li>
+                        <li>Worked on custom design projects, including logos, product labels, and social media graphics, to build unique brand identities.</li>
+                        <li>Conducted client consultations to understand project requirements and deliver tailored, high-quality designs.                        </li>
+                     </ul>
+                     <ul class="exp-achievement">
+                        <li>Delivered compelling digital designs for clients like CreativeMbassy and Ippudo Singapore, elevating their brand presence and engagement.</li>
+                        <li>Built a versatile design portfolio that attracted new clients, leading to a steady flow of freelance projects and a 90% client retention rate.</li>
+                        <li>Streamlined project management processes, completing projects within deadlines and reducing client revision rounds by 15%.</li>
+                        <li>Helped clients achieve improved brand consistency across digital and print platforms, increasing customer trust and loyalty.</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="list-group-item border-0 p-0 my-2">
+                  <div class="exp-details">
+                     <p class="exp-company">MHA (Ministry of Home Affairs)</p>
+                     <p class="exp-duration">2008 Sept - 2012 May</p>
+                     <p class="exp-role">Junior Prison Officer(Corporal)</p>
+                     <ul class="exp-task">
+                        <li>Responsible for maintaining security, order, and discipline within correctional facilities.</li>
+                        <li>Supervised inmate activities, ensuring compliance with regulations and safety protocols.</li>
+                        <li>Assisted senior officers in operational tasks, conducted inspections, and managed documentation.</li>
+                     </ul>
+                     <ul class="exp-achievement">
+                        <li>Played an active role in supporting inmate rehabilitation programs, contributing to a 15% improvement in behavioral assessments for program participants.</li>
+                        <li>Assisted with implementing inmate counseling sessions, fostering a positive environment that encouraged inmates to engage in constructive dialogue.</li>
+                        <li>Conducted regular check-ins with inmates to monitor mental and emotional well-being, identifying early signs of distress and escalating as needed for timely intervention.</li>
+                        <li>Supported the development of skill-building workshops and educational sessions, which helped prepare inmates for successful reintegration post-release.</li>
+                        <li>Built rapport and trust with inmates, creating a safer and more collaborative environment that reduced incidents of conflict by 20%.</li>
+                        <li>Collaborated with senior officers and social workers to identify and address individual rehabilitation needs, enhancing the effectiveness of personalized rehabilitation plans.</li>
+                        <li>Successfully mediated conflicts among inmates by using active listening and conflict-resolution techniques, contributing to a more stable and respectful facility environment.</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="list-group-item border-0 p-0 my-2">
+                  <div class="exp-details">
+                     <p class="exp-company">Red Print Media Pte Ltd</p>
+                     <p class="exp-duration">2008 Aug - 2008 Sept</p>
+                     <p class="exp-role">Junior Graphic Designer</p>
+                     <ul class="exp-task">
+                        <li>Assisted with the production and quality control of large format prints, ensuring adherence to design specifications and color accuracy.</li>
+                        <li>Supported the team in preparing artwork for large-scale print, including banners, posters, and signage.</li>
+                        <li>Performed layout adjustments, color corrections, and pre-print checks to ensure high-quality output.</li>
+                        <li>Gained experience in the technical aspects of large-format printing and production processes.</li>
+                     </ul>
+                     <ul class="exp-achievement">
+                        <li>Assisted in the production of high-quality large-format prints, ensuring that each project met exacting client specifications.</li>
+                        <li>Enhanced the accuracy of large-format color calibration and layout adjustments, reducing reprints by 10%.</li>
+                        <li>Contributed to the successful completion of multiple time-sensitive print projects, meeting tight deadlines without compromising quality.</li>
+                        <li>Developed foundational skills in large-format printing and pre-press operations, laying the groundwork for a career in graphic design.</li>
+                     </ul>
+                  </div>
+               </div>
+         </div>
+      </div>
+   </div>
+<!-- Education & Language -->
+   <div class="row section">
+      <hr class="col-1 border-5 border-black">
+      <div class="col-10 offset-2">
+         <h4>Education & Language</h4>
+         <div class="list-group">
+            <div class="list-group-item border-0 p-0 my-2">
+               <div class="edu-details">
+                  <p class="edu-school">Lasalle College of the Arts</p>
+                  <p class="edu-cert">Diploma in Design communications</p>
+                  <p class="edu-duration">2012 Aug - 2015 May</p>
+               </div>
+            </div>
+            <div class="list-group-item border-0 p-0 my-2">
+               <div class="edu-details">
+                  <p class="edu-school">Central College East (Bedok)</p>
+                  <p class="edu-cert">NITEC Certification in Digital Media Design</p>
+                  <p class="edu-duration">2004 Jan - 2005 Nov</p>
+               </div>
+            </div>
+            <div class="list-group-item border-0 p-0 my-2">
+               <div class="edu-details">
+                  <div class="edu-language">
+                     <table class="table table-borderless">
+                        <tbody>
+                            <tr class="lang-details">
+                                <th scope="row" class="col-4">English</th>
+                                <td class="col-8">
+                                    Native Language
+                                </td>
+                            </tr>
+                            <tr class="lang-details">
+                                <th scope="row" class="col-4">Mandrin & Dialect</th>
+                                <td class="col-8">
+                                    Conversational Second Language
+                                </td>
+                            </tr>
+                            <tr class="lang-details">
+                                <th scope="row" class="col-4">Spanish</th>
+                                <td class="col-8">
+                                    Basic Conversational Foreign Language
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+
 </div>
 
-<!---------------------------------------------------------------------------------------------------------
-Bootstrap JS
----------------------------------------------------------------------------------------------------------->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<!-- Print adjustments -->
+<script src="../js/print-adjustment.js"></script>
+   
+<!-- Bootstrap JS and Popper.js - Check the path -->
+<script src="../bs-js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
