@@ -57,7 +57,7 @@ hr {
    opacity: 1;
 }
 .py-025 {
-   padding: 5% 0!important;
+   padding: 5% 0 0!important;
 }
 @media print {
    .section,
@@ -92,11 +92,11 @@ div.exp-details {
       font-weight: 700;
       margin-inline-start: -30px;
    }
-   & ul.edu-language {
+   & ul.exp-achievement {
       margin-top: 1rem;
       padding-inline-start: 30px;
    }
-   & ul.edu-language::before {
+   & ul.exp-achievement::before {
       content: "Achievements";
       font-weight: 700;
       margin-inline-start: -30px;
