@@ -92,6 +92,11 @@ div.exp-details {
       font-weight: 700;
       margin-inline-start: -30px;
    }
+   & ul.exp-task li.subhead {
+      list-style: none;
+      font-weight: bold;
+      margin-inline-start: -30px;
+   }
    & ul.exp-achievement {
       margin-top: 1rem;
       padding-inline-start: 30px;
