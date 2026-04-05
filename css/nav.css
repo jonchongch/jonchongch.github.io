@@ -56,12 +56,12 @@ text-align: right;
 }
 
 @media screen and (max-width : 767px) {
-   /* Compact horizontal top bar on mobile */
+   /* Two-row top bar: row 1 = logo + nav link, row 2 = social icons */
    .navbar {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
       position: fixed;
       top: 0;
       left: 0;
@@ -69,28 +69,41 @@ text-align: right;
       height: auto;
       padding: 10px 16px;
    }
+   /* Row 1 left: logo */
    a.navbar-brand {
       position: relative;
       display: block;
       width: auto;
+      flex: 0 0 auto;
+      order: 1;
       padding: 4px 0;
       text-align: left;
+      align-self: center;
    }
    .navbar-brand > i.logo:before {
       font-size: 1.5em;
    }
-   /* Both collapse divs become inline flex items */
-   .navbar-collapse {
+   /* Row 1 right: nav links (CV etc.) */
+   .navbar-collapse#navbarNav {
       display: flex !important;
+      flex: 1;
+      order: 2;
       width: auto;
       flex-direction: row;
       align-items: center;
+      justify-content: flex-end;
    }
-   /* Override Bootstrap's position:absolute !important on the social icons div */
-   .navbar .navbar-collapse.position-absolute {
+   /* Row 2: social icons — full width forces a new row */
+   .navbar-collapse.position-absolute {
       position: static !important;
+      display: flex !important;
+      flex: 0 0 100%;
+      order: 3;
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      padding: 2px 0 0;
    }
-   /* Nav links row */
    .navbar-nav {
       width: auto;
       flex-direction: row;
@@ -106,10 +119,14 @@ text-align: right;
       white-space: nowrap;
    }
    .navbar-nav.justify-content-end {
-      justify-content: flex-end !important;
+      justify-content: flex-start !important;
    }
    .end-0 {
       right: auto !important;
       left: auto !important;
+   }
+   /* Remove left margin on first social icon so it aligns with logo */
+   .navbar-collapse.position-absolute .nav-item:first-child {
+      margin-left: 0 !important;
    }
 }

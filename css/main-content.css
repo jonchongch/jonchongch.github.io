@@ -34,18 +34,18 @@
 }
 @media screen and (max-width : 767px) {
     .main-content {
-        /* Fill the space between nav (65px) and summary (42vh) */
-        height: calc(100vh - 65px - 42vh);
+        /* Fill the space between nav (90px) and summary (42vh) */
+        height: calc(100vh - 90px - 42vh);
         padding: 0;
         overscroll-behavior-y: contain;
     }
     /* Each image card fills the full gallery viewport for a swipe feel */
     .image-wrapper {
-        min-height: calc(100vh - 65px - 42vh);
+        min-height: calc(100vh - 90px - 42vh);
         flex-shrink: 0;
     }
     .image-wrapper img {
-        height: calc(100vh - 65px - 42vh);
+        height: calc(100vh - 90px - 42vh);
         object-fit: cover;
     }
 }

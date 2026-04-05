@@ -59,8 +59,8 @@ div.container {
 @media screen and (max-width : 767px) {
    div.container {
       height: 100vh;
-      /* 65px = mobile nav bar height; image area uses calc() in main-content.css */
-      padding: 65px 0 0;
+      /* 90px = mobile nav bar height (2 rows); image area uses calc() in main-content.css */
+      padding: 90px 0 0;
    }
 }
 
