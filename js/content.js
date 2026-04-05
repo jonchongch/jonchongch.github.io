@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
+   // Set footer year
+   const yearEl = document.getElementById('footer-year');
+   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
    const mainContent = document.querySelector('.main-content');
    const summaryText = document.getElementById('summary-text');
 
