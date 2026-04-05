@@ -59,19 +59,20 @@ div.container {
 @media screen and (max-width : 767px) {
    div.container {
       height: 100vh;
-      /* 90px = mobile nav bar height (2 rows); image area uses calc() in main-content.css */
-      padding: 90px 0 0;
+      /* 58px = mobile nav bar height (single row, tight); image area uses calc() in main-content.css */
+      padding: 58px 0 0;
    }
 }
 
-/* Footer anchored to the bottom of the left nav column */
+/* Footer anchored to the bottom of the right summary column on desktop */
 .portfolio-footer {
    position: fixed;
    bottom: 10px;
-   left: 0;
-   width: 12.5%;
+   right: 0;
+   left: auto;
+   width: 20%;
    padding: 0 10px;
-   text-align: left;
+   text-align: right;
    font-size: 7pt;
    color: rgba(50,50,50,0.45);
    z-index: 1000;

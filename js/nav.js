@@ -1,7 +1,6 @@
 // Define your navigation items
 const navItems = [
     // { name: "Home", href: "index.html", newTab: false }
-    // You can add more items here if needed
     { name: "Curriculum Vitae", href: "page/cv-jon.html", newTab: true },
 ];
 

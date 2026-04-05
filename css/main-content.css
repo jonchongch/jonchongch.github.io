@@ -23,6 +23,7 @@
 .image-wrapper {
     display: flex;
     flex-direction: column; /* Stack images vertically */
+    scroll-snap-align: start; /* Snap the wrapper, not the img */
 }
 
 /* Styling for the images */
@@ -30,22 +31,20 @@
     width: 100%; /* Image takes full width of the frame */
     height: auto; /* Same as the frame height to fill it */
     object-fit: cover; /* Cover the entire container */
-    scroll-snap-align: start; /* Snap image to the start */
 }
 @media screen and (max-width : 767px) {
     .main-content {
-        /* Fill the space between nav (90px) and summary (42vh) */
-        height: calc(100vh - 90px - 42vh);
+        /* Fill the space between nav (58px) and summary (42vh) */
+        height: calc(100vh - 58px - 42vh);
         padding: 0;
         overscroll-behavior-y: contain;
     }
-    /* Each image card fills the full gallery viewport for a swipe feel */
     .image-wrapper {
-        min-height: calc(100vh - 90px - 42vh);
+        min-height: calc(100vh - 58px - 42vh);
         flex-shrink: 0;
     }
     .image-wrapper img {
-        height: calc(100vh - 90px - 42vh);
+        height: calc(100vh - 58px - 42vh);
         object-fit: cover;
     }
 }

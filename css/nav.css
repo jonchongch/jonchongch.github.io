@@ -4,8 +4,8 @@
    margin: auto 0;
    padding: 15px 10px; 
    width: 12.5%;
-   height: 40vh;
-   top: 30%;
+   height: 60vh;
+   top: 20%;
    left: 0;
    z-index: 9999;
    box-shadow: 3px 3px 7px rgba(50,50,50,0.25);
@@ -56,77 +56,84 @@ text-align: right;
 }
 
 @media screen and (max-width : 767px) {
-   /* Two-row top bar: row 1 = logo + nav link, row 2 = social icons */
+   /* Single-row top bar: logo left, icons (CV first) right */
    .navbar {
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
       align-items: center;
+      justify-content: space-between;
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: auto;
-      padding: 10px 16px;
+      padding: 6px 16px;
    }
-   /* Row 1 left: logo */
    a.navbar-brand {
       position: relative;
-      display: block;
+      display: flex;
+      align-items: center;
       width: auto;
-      flex: 0 0 auto;
-      order: 1;
-      padding: 4px 0;
-      text-align: left;
-      align-self: center;
+      padding: 0;
    }
    .navbar-brand > i.logo:before {
-      font-size: 1.5em;
+      font-size: 2em;
    }
-   /* Row 1 right: nav links (CV etc.) */
+   /* navbarNav is empty — hide it */
    .navbar-collapse#navbarNav {
-      display: flex !important;
-      flex: 1;
-      order: 2;
-      width: auto;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-end;
+      display: none !important;
    }
-   /* Row 2: social icons — full width forces a new row */
+   /* Social icons (CV first) fill remaining space, right-aligned */
    .navbar-collapse.position-absolute {
       position: static !important;
       display: flex !important;
-      flex: 0 0 100%;
-      order: 3;
-      width: 100%;
+      flex: 1;
       flex-direction: row;
       align-items: center;
-      padding: 2px 0 0;
+      justify-content: flex-end;
+      padding: 0;
    }
    .navbar-nav {
       width: auto;
       flex-direction: row;
       align-items: center;
-      text-align: left;
-   }
-   #nav-menu {
-      flex-direction: row !important;
    }
    .navbar-nav .nav-link {
-      padding: 6px 6px !important;
-      font-size: 9pt;
-      white-space: nowrap;
+      padding: 6px 8px !important;
+      font-size: 12pt;
+   }
+   /* Larger icons in the social/CV row on mobile */
+   .navbar-collapse.position-absolute .nav-link i {
+      font-size: 1.4em;
+   }
+   .cv-label {
+      font-size: 1em;
    }
    .navbar-nav.justify-content-end {
-      justify-content: flex-start !important;
+      justify-content: flex-end !important;
    }
    .end-0 {
       right: auto !important;
       left: auto !important;
    }
-   /* Remove left margin on first social icon so it aligns with logo */
-   .navbar-collapse.position-absolute .nav-item:first-child {
-      margin-left: 0 !important;
+}
+
+/* CV icon+label is mobile-only; desktop uses the text link in the left nav */
+.cv-mobile-only {
+   display: none;
+}
+@media screen and (max-width: 767px) {
+   .cv-mobile-only {
+      display: flex;
+      align-items: center;
    }
+}
+
+/* CV label text next to icon */
+.cv-label {
+   font-size: 9pt;
+   margin-left: 4px;
+   vertical-align: middle;
+   font-family: 'Lato', sans-serif;
+   font-weight: 500;
 }
