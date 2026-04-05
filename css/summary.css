@@ -29,16 +29,51 @@ div.summary {
    font-weight: 700;
    font-size: 10pt;
 }
-@media screen and (max-width : 440px) {
+
+/* Intro identity panel */
+#intro-panel {
+   padding: 5px 5% 10px;
+   border-bottom: 1px solid rgba(50,50,50,0.12);
+   margin-bottom: 8px;
+}
+.intro-name {
+   font-weight: 900;
+   font-size: 11pt;
+   margin: 0 0 3px;
+   letter-spacing: 0.02em;
+}
+.intro-title {
+   font-size: 9pt;
+   font-weight: 400;
+   margin: 0 0 5px;
+}
+.intro-tags {
+   font-size: 8pt;
+   color: rgba(50,50,50,0.55);
+   margin: 0;
+   letter-spacing: 0.03em;
+}
+@media screen and (max-width : 767px) {
    div.summary {
-      display: block;
       position: fixed;
-      margin: auto 0;
-      padding: 15px 10px; 
       width: 100%;
-      height: 43vh;
+      height: 42vh;
       top: auto;
       bottom: 0;
       right: 0;
+      margin: 0;
+      padding: 10px 16px;
+      /* Allow long descriptions to scroll inside the panel */
+      overflow-y: auto;
+      scrollbar-width: none;
+   }
+   div.summary::-webkit-scrollbar {
+      display: none;
+   }
+   #intro-panel {
+      padding: 0 0 8px;
+   }
+   #summary-text {
+      padding: 4px 0;
    }
 }

@@ -56,14 +56,39 @@ div.container {
    /* max-height: 100vh; */
    padding: 5vh 10%;
 }
-@media screen and (max-width : 440px) {
+@media screen and (max-width : 767px) {
    div.container {
-      display: block;
-      position: relative;
+      height: 100vh;
+      /* 65px = mobile nav bar height; image area uses calc() in main-content.css */
+      padding: 65px 0 0;
+   }
+}
+
+/* Footer anchored to the bottom of the left nav column */
+.portfolio-footer {
+   position: fixed;
+   bottom: 10px;
+   left: 0;
+   width: 12.5%;
+   padding: 0 10px;
+   text-align: left;
+   font-size: 7pt;
+   color: rgba(50,50,50,0.45);
+   z-index: 1000;
+}
+.portfolio-footer p {
+   margin: 0;
+}
+@media screen and (max-width: 767px) {
+   .portfolio-footer {
+      position: fixed;
+      bottom: 10px;
+      left: 0;
       width: 100%;
-      max-width: 100%;
-      height: 30vh;
-      /* max-height: 100vh; */
-      padding: 30vh 0 40vh;
-   }  
+      padding: 0 10px;
+      text-align: left;
+      font-size: 7pt;
+      color: rgba(50,50,50,0.45);
+      z-index: 1000;
+   }
 }
