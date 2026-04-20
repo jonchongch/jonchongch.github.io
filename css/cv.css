@@ -90,14 +90,9 @@ hr {
       break-inside: auto;
    }
 
-   .row.section {
+   .container > .row.section:nth-child(n+4) {
       page-break-before: always;
       break-before: page;
-   }
-
-   .row.section:first-of-type {
-      page-break-before: auto;
-      break-before: auto;
    }
 }
 /* Skill Section */
