@@ -60,9 +60,34 @@ hr {
    padding: 5% 0 0!important;
 }
 @media print {
+   @page {
+      size: A4;
+      margin: 10mm;
+   }
+
+   body {
+      width: auto;
+      margin: 0;
+      padding: 0;
+   }
+
    .section,
    .list-group-item {
-      page-break-inside: avoid;
+      page-break-inside: auto;
+      break-inside: auto;
+   }
+
+   h4,
+   .exp-company,
+   .exp-role {
+      page-break-after: avoid;
+      break-after: avoid;
+   }
+
+   .exp-task,
+   .exp-achievement {
+      page-break-inside: auto;
+      break-inside: auto;
    }
 }
 /* Skill Section */
