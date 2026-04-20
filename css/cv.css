@@ -38,7 +38,7 @@ body {
 display: block;
 margin: 0 auto;
 padding: 2.5% 0;
-width: 794px;
+width: min(920px, calc(100% - 2rem));
 /* border: 1px solid #000; */
 }
 body > * {
@@ -62,7 +62,7 @@ hr {
 @media print {
    @page {
       size: A4;
-      margin: 10mm;
+      margin: 5mm 3mm;
    }
 
    body {
@@ -77,23 +77,25 @@ hr {
       break-inside: auto;
    }
 
-   h4,
-   .exp-company,
-   .exp-role {
-      page-break-after: avoid;
-      break-after: avoid;
+   /* Keep Work History heading and list-group together */
+   h4 + .list-group {
+      break-before: avoid;
+      page-break-before: avoid;
    }
-
-   .exp-task,
-   .exp-achievement {
-      page-break-inside: auto;
+   /* Prevent page breaks inside key blocks */
+   .exp-details {
       break-inside: auto;
+      page-break-inside: auto;
+   }
+   ul.exp-task, ul.exp-achievement {
+      break-inside: avoid;
+      page-break-inside: avoid;
+   }
+   ul.exp-task > li, ul.exp-achievement > li {
+      break-inside: avoid;
+      page-break-inside: avoid;
    }
 
-   .container > .row.section:nth-child(n+4) {
-      page-break-before: always;
-      break-before: page;
-   }
 }
 /* Skill Section */
 
