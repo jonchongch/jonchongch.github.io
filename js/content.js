@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
    // Image data with more details
    const images = [
-    {
+        {
            src: "media/JeanYipGroup-OHS.jpg",
            alt: "Oriental Hair Solutions Image",
            title: "Oriental Hair Solutions",
