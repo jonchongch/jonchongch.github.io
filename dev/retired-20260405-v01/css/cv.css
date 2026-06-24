@@ -1,0 +1,141 @@
+/* Base Setting */
+@font-face {
+   font-family: 'Lato';
+   src: url('../font/Lato-Light.ttf') format('truetype');
+   font-weight: 100;
+   font-style: normal;
+   font-size: 10pt;
+}
+@font-face {
+   font-family: 'Lato';
+   src: url('../font/Lato-Thin.ttf') format('truetype');
+   font-weight: 300;
+   font-style: normal;
+   font-size: 10pt;
+}
+@font-face {
+   font-family: 'Lato';
+   src: url('../font/Lato-Regular.ttf') format('truetype');
+   font-weight: 500;
+   font-style: normal;
+   font-size: 10pt;
+}
+@font-face {
+   font-family: 'Lato';
+   src: url('../font/Lato-Bold.ttf') format('truetype');
+   font-weight: 700;
+   font-style: normal;
+   font-size: 10pt;
+}
+@font-face {
+   font-family: 'Lato';
+   src: url('../font/Lato-Black.ttf') format('truetype');
+   font-weight: 900;
+   font-style: normal;
+   font-size: 10pt;
+}
+body {
+display: block;
+margin: 0 auto;
+padding: 2.5% 0;
+width: 794px;
+/* border: 1px solid #000; */
+}
+body > * {
+position: relative;
+display: block;
+margin: 0;
+padding: 0;
+width: 100%;
+font-family: 'Lato', sans-serif;
+font-size: 10pt;
+}
+h1,h2,h3,h4,h5 {
+   font-weight: 900;
+}
+hr {
+   opacity: 1;
+}
+.py-025 {
+   padding: 5% 0 0!important;
+}
+@media print {
+   .section,
+   .list-group-item {
+      page-break-inside: avoid;
+   }
+}
+/* Skill Section */
+
+.skill > span {
+   --bs-badge-font-size: 0.75em;
+   --bs-badge-font-weight: 700;
+   display: inline-block;
+   margin : 0.25rem auto !important;
+   padding : 0.5rem 1rem !important;
+   font-size: var(--bs-badge-font-size);
+   font-weight: var(--bs-badge-font-weight);
+   line-height: 1;
+   text-align: center;
+   color : #fff !important;
+   background-color : RGBA(var(--bs-primary-rgb),var(--bs-bg-opacity,1))!important;
+   border-radius : var(--bs-border-radius-pill)!important;
+   white-space: nowrap;
+   vertical-align: baseline;
+}
+
+/* Info Section */
+.info-details {
+   & th {
+   padding: 0 .5rem;   
+   } & td {
+   padding: 0 .5rem;
+}
+}
+
+/* Experience Section */
+div.exp-details {
+   & p {
+    margin-top: 0;  
+    margin-bottom: 0;  
+   }
+   & p.exp-company {
+      font-weight: 700;
+   }
+   & ul.exp-task {
+      margin-top: 1rem;
+      padding-inline-start: 30px;
+   }
+   & ul.exp-task::before {
+      content: "Job Description";
+      font-weight: 700;
+      margin-inline-start: -30px;
+   }
+   & ul.exp-task li.subhead {
+      list-style: none;
+      font-weight: bold;
+      margin-inline-start: -30px;
+   }
+   & ul.exp-achievement {
+      margin-top: 1rem;
+      padding-inline-start: 30px;
+   }
+   & ul.exp-achievement::before {
+      content: "Achievements";
+      font-weight: 700;
+      margin-inline-start: -30px;
+   }
+}
+/* Education & Language Section */
+div.edu-details {
+   & p {
+      margin-top: 0;  
+      margin-bottom: 0;  
+   }
+   & p.edu-school {
+      font-weight: 700;
+   }
+   & div.edu-language > table > tbody > tr.lang-details > th {
+      padding-left: 0;
+   }
+}
