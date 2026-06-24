@@ -8,6 +8,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
    // Image data with more details
    const images = [
+    {
+           src: "media/JeanYipGroup-OHS.jpg",
+           alt: "Oriental Hair Solutions Image",
+           title: "Oriental Hair Solutions",
+           description: "Oriental Hair Solutions is a leading hair care and treatment brand in Singapore, specializing in advanced hair solutions for various hair types and concerns. The brand is known for its innovative approach to hair care, offering a range of products and services designed to promote healthy hair and scalp.",
+           role: "Web Development | UI/UX Analysis | SEO"
+       },
+       {
+           src: "media/JeanYipGroup-CW.jpg",
+           alt: "Cheryl W Image",
+           title: "Cheryl W",
+           description: "Cheryl W is a prominent Singaporean wellness and weight management brand founded by actress and entrepreneur Cheryl Wee. She has played a pivotal role in various projects aimed at enhancing the quality of life for women, focusing on holistic health, sustainable weight management, and body positivity.",
+           role: "Web Development | Custom Feature Development | UI/UX Analysis | SEO"
+       },
+       {
+           src: "media/Singhealth.jpg",
+           alt: "Singhealth Image",
+           title: "Singhealth",
+           description: "Singhealth is Singapore's largest public healthcare group, providing comprehensive medical services and innovative healthcare solutions. It is committed to improving the health and well-being of the community through excellence in patient care, research, and education.",
+           role: "Web Content Management | Client Coordinator"
+       },
        {
            src: "media/GadgetKing-Rebrand.jpg",
            alt: "Gadget King Image",
